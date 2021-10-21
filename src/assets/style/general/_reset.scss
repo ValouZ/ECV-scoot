@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lexend Deca';
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-navy;
+}
+
+h1 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+}
+
+h2 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+}
+
+h3 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.78571px;
+}
+
+h4 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+}

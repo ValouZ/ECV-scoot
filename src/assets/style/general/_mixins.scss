@@ -1,0 +1,19 @@
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 0px) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: 0px;
+}
