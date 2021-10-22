@@ -1,0 +1,28 @@
+.button{
+    border: solid $yellow;
+    background-color: $yellow;
+    color: $white;
+    width: 195px;
+    height: 53px;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    &:hover{
+        border: solid $yellow;
+        background-color: $white;
+        color: $yellow;
+        width: 195px;
+        height: 53px;
+        font-family: Space Mono;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+}
