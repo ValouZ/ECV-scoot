@@ -26,3 +26,43 @@
         align-self: center;
     }
 }
+
+@media screen and (max-width: 422px) {
+    .header {
+        position: relative;
+        padding: 20px 10px;
+    
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 2%;
+        background: $white;
+    
+      
+        &__brand{
+            align-self: center;
+            justify-self: center;
+        }
+        &__nav{
+            align-self: center;
+            li{
+                display: inline;
+                padding-right: 2%;
+                a{
+                    @include font($ff: Space Mono, $fw: bold, $fs:7px);
+                }
+            }
+        }
+        &__btn{
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width:422px){
+    h2 {
+        font-family: 'Space Mono';
+        font-weight: bold;
+        font-size: 30px;
+        letter-spacing: -2.14286px;
+      }
+}
