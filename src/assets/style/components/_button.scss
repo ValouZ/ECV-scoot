@@ -9,7 +9,9 @@
     font-weight: bold;
     font-size: 15px;
     line-height: 25px;
-    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     &:hover{
         border: solid $yellow;
         background-color: $white;
@@ -21,7 +23,9 @@
         font-weight: bold;
         font-size: 15px;
         line-height: 25px;
-        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         transition: 0.4s;
     }
 

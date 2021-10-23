@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    padding: 36px 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 4%;
+    background: $white;
+
+  
+    &__brand{
+        align-self: center;
+        justify-self: flex-end;
+    }
+    &__nav{
+        align-self: center;
+        li{
+            display: inline;
+            padding-right: 2%;
+            a{
+                @include font($ff: Space Mono, $fw: bold, $fs:15px);
+            }
+        }
+    }
+    &__btn{
+        align-self: center;
+    }
+  }
