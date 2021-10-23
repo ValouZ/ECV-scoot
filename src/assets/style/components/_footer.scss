@@ -1,0 +1,87 @@
+.footer-section-download-app{
+  @include flex($dir: column, $jc:center, $ai:center);
+  background-color: $dark-navy;
+  padding: 10vh 6vw;
+  h3{
+    color: $white;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+  .section-download-app-links{
+    @include flex($jc:center, $ai:center);
+    flex-wrap: wrap;
+    font-family: "Space Mono";
+    a{
+      background-color: $light-grey;
+      border-radius: 4px;
+      padding: 0.5vh 1vh;
+      @include flex($jc:center, $ai:center);
+      &:nth-child(2){
+        margin-left: 2vh;
+      }
+      div{
+        color: $dark-navy;
+        margin-left: 2vh;
+        p:first-child{
+          font-size: 10px;
+          height: 15px;
+        }
+        p:nth-child(2){
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.footer-section-links{
+  @include flex($dir: column, $jc:center, $ai:center);
+  background-color: #333A44;
+  padding: 4vh 6vw;
+  flex-wrap: wrap;
+  ul:first-child{
+    @include flex($dir: column, $ai:center);
+    margin-top: 2vh;
+    flex-wrap: wrap;
+    li{
+      margin-top: 2vh;
+    }
+    a{
+      color: $grey;
+      &:hover{
+        color: $yellow;
+        transition: 0.3s;
+      }
+    }
+  }
+  ul{
+    margin-top: 3vh;
+    @include flex($ai:center);
+    li{
+      margin: 0 2vw;
+      a:hover{
+        filter: brightness(13);
+        transition: 0.3s;
+      }
+    }  
+  }
+}
+
+@media screen and (min-width: 422px){
+  .footer-section-links{
+    @include flex($dir:row, $jc:space-between, $ai:center);
+    ul:first-child{
+      @include flex($dir: row, $ai:center);
+      margin-top: 0;
+      li{
+        margin-top: 0;
+      }
+    }
+    ul{
+      margin-top: 0;
+      li{
+        margin: 0 1vw;
+      } 
+    }
+  }
+}
