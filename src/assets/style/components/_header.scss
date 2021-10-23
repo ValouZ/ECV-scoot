@@ -48,7 +48,7 @@
                 display: inline;
                 padding-right: 2%;
                 a{
-                    @include font($ff: Space Mono, $fw: bold, $fs:7px);
+                    @include font($ff: Space Mono, $fw: bold, $fs:60%);
                 }
             }
         }
