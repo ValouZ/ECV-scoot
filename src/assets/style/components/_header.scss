@@ -1,0 +1,4 @@
+header{
+  @include flex($jc:space-between, $ai:center);
+  padding: 2vh 6vw;
+}
