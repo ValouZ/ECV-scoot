@@ -2,15 +2,40 @@
   @include flex($dir: column, $jc:center, $ai:center);
   background-color: $dark-navy;
   padding: 10vh 6vw;
+  position: relative;
+  overflow: hidden;
+  .footer-section-download-app__circle{
+    content:"";
+    position: absolute;
+    width: 347px;
+    height: 347px;
+    border-radius: 50%;
+    border: 15px solid $light-grey;
+    opacity: 0.1;
+    z-index: 1;
+    top: 50%;
+  }
+  .circle-one{
+    right: 600.5px;
+  }
+  .circle-two{
+    right: 213.5px;
+  }
+  .circle-three{
+    right: -173.5px;
+    background-color: $light-grey;
+  }
   h3{
     color: $white;
     margin-bottom: 5vh;
     text-align: center;
+    z-index: 2;
   }
   .section-download-app__links{
     @include flex($jc:center, $ai:center, $gap: 15px);
     flex-wrap: wrap;
     font-family: "Space Mono";
+    z-index: 2;
     a{
       background-color: $light-grey;
       border-radius: 4px;
@@ -73,7 +98,7 @@
         margin-top: 0;
       }
     }
-    ul{
+    ul:nth-child(3){
       margin-top: 0;
       li{
         margin: 0 1vw;

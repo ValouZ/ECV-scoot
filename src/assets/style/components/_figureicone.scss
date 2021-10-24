@@ -4,10 +4,9 @@
   @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
   article{
     @include flex($dir: column, $jc:center, $ai:center);
-    h3{
+    h4{
       font-weight: bold;
       color: $dark-navy;
-      font-family: "Space Mono";
       margin:20px 0;
       font-size: 20px;
     }
@@ -46,7 +45,7 @@
       display: grid;
       grid-template-columns: 100px 1fr;
       gap: 50px;
-      h3{
+      h4{
         margin-top:0;
       }
       div:first-child{
