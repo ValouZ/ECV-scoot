@@ -35,7 +35,8 @@
       height: 72%;
       top: 0;
       position: absolute;
-      left: 10.5vh;
+      left: 6vw;
+      transform: translateX(39px);
       border: 10px solid $light-grey;
       z-index: 1;
     }
