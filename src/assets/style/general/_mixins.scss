@@ -15,7 +15,7 @@
   flex-direction: $dir;
   justify-content: $jc;
   align-items: $ai;
-  gap: 0px;
+  gap: $gap;
 }
 
 @mixin font($ff: Space Mono, $fw: bold, $fs: 24px, $co: $grey, $ln: 28px, $ls: -1.07143px) {

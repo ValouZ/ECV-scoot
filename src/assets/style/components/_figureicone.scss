@@ -1,0 +1,80 @@
+.section-figure-icones{
+  padding: 5vh 6vw;
+  text-align: center;
+  @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
+  article{
+    @include flex($dir: column, $jc:center, $ai:center);
+    h3{
+      font-weight: bold;
+      color: $dark-navy;
+      font-family: "Space Mono";
+      margin:20px 0;
+      font-size: 20px;
+    }
+    div:first-child{
+      @include flex($jc:center, $ai:center);
+      background-color: $yellow;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    p{
+      color:$grey;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width : 1099px){
+  .section-figure-icones{
+    text-align: left;
+    padding: 10vh 6vw;
+    position: relative;
+    hr{
+      width: 1px;
+      height: 76%;
+      top: 0;
+      position: absolute;
+      left: 10.5vh;
+      border: 10px solid $light-grey;
+      z-index: 1;
+    }
+    article{
+      z-index: 3;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 50px;
+      h3{
+        margin-top:0;
+      }
+      div:first-child{
+        justify-self: center;
+        align-self: flex-start;
+      }
+    }
+  } 
+}
+
+@media screen and (min-width: 1100px){
+  .section-figure-icones{
+    @include flex($dir: row, $jc:flex-start, $ai:flex-start, $gap: 50px);
+    text-align: left;
+    padding: 10vh 6vw;
+    position: relative;
+    hr{
+      width: 69%;
+      height: 1px;
+      position: absolute;
+      left: 0px;
+      margin-top: 25px;
+      border: 10px solid $light-grey;
+      z-index: 1;
+    }
+    article{
+      z-index: 3;
+    }
+    div:first-child{
+      align-self: flex-start;
+    }
+  }
+}

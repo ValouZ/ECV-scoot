@@ -7,21 +7,17 @@
     margin-bottom: 5vh;
     text-align: center;
   }
-  .section-download-app-links{
-    @include flex($jc:center, $ai:center);
+  .section-download-app__links{
+    @include flex($jc:center, $ai:center, $gap: 15px);
     flex-wrap: wrap;
     font-family: "Space Mono";
     a{
       background-color: $light-grey;
       border-radius: 4px;
       padding: 0.5vh 1vh;
-      @include flex($jc:center, $ai:center);
-      &:nth-child(2){
-        margin-left: 2vh;
-      }
+      @include flex($jc:center, $ai:center, $gap: 10px);
       div{
         color: $dark-navy;
-        margin-left: 2vh;
         p:first-child{
           font-size: 10px;
           height: 15px;
@@ -54,7 +50,7 @@
       }
     }
   }
-  ul{
+  ul:nth-child(3){
     margin-top: 3vh;
     @include flex($ai:center);
     li{
