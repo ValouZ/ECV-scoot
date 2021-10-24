@@ -29,8 +29,9 @@
     text-align: left;
     padding: 10vh 6vw;
     position: relative;
-    hr{
-      width: 1px;
+    &::before{
+      content:"";
+      width: 0px;
       height: 76%;
       top: 0;
       position: absolute;
@@ -61,14 +62,14 @@
     text-align: left;
     padding: 10vh 6vw;
     position: relative;
-    hr{
+    &::before{
+      content:"";
       width: 69%;
-      height: 1px;
+      height: 0px;
+      top:12.5vh;
+      left:0;
       position: absolute;
-      left: 0px;
-      margin-top: 25px;
       border: 10px solid $light-grey;
-      z-index: 1;
     }
     article{
       z-index: 3;
