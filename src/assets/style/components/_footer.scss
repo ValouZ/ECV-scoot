@@ -59,10 +59,8 @@
   @include flex($dir: column, $jc:center, $ai:center);
   background-color: #333A44;
   padding: 4vh 6vw;
-  flex-wrap: wrap;
   ul:first-child{
-    @include flex($dir: column, $ai:center);
-    margin-top: 2vh;
+    @include flex($dir: column, $ai:center, $gap:10px);
     flex-wrap: wrap;
     li{
       margin-top: 2vh;
@@ -88,12 +86,11 @@
   }
 }
 
-@media screen and (min-width: 422px){
+@media screen and (min-width: 768px){
   .footer-section-links{
     @include flex($dir:row, $jc:space-between, $ai:center);
     ul:first-child{
-      @include flex($dir: row, $ai:center);
-      margin-top: 0;
+      @include flex($dir: row, $ai:center, $gap:15px);
       li{
         margin-top: 0;
       }
