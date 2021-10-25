@@ -1,0 +1,110 @@
+.bubble-right{
+  img:nth-child(2){
+    left: 6vw;
+    top: 205px;
+  }
+}
+.bubble-left{
+  img:nth-child(2){
+    right: 6vw;
+    top: 180px;
+    transform: rotate(180deg);
+  }
+}
+.section-bubble{
+  position: relative;
+  padding: 5vh 6vw;
+  @include flex($dir: column, $jc:center, $ai:center, $gap: 40px);
+  text-align: center;
+  overflow: hidden;
+  img:first-child{
+    border-radius: 50%;
+    z-index:3;
+  }
+  img:nth-child(2){
+    position: absolute;
+    z-index:4;
+  }
+  div{
+    @include flex($dir: column, $jc:center, $ai:center, $gap: 30px);
+    h2{
+      font-size: 32px;
+      line-height: 32px
+    }
+    p{
+      color: $grey;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .bubble-right{
+    &:before{
+    right: -300px;
+    top: 350px;
+    }
+    img:nth-child(2){
+      left:initial;
+      right: 0;
+      top: 300px;
+    }
+  }
+  .bubble-left{
+    &:before{
+    left: -300px;
+    top: 300px;
+    }
+    img:nth-child(2){
+      right:initial;
+      left: 0;
+      top: 250px;
+    }
+  }
+  .section-bubble{
+    &::before{
+      content: "";
+      position: absolute;
+      background-color: $light-grey;
+      height: 445px;
+      width:445px;
+      border-radius: 50%;
+      top:5vh;
+      z-index:1;
+    }
+    img:first-child{
+      height: 445px;
+      width:445px;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .bubble-right{
+    @include flex($dir: row-reverse, $jc:space-between, $gap: 50px, $ai:center);
+    img:nth-child(2){
+      top: 400px;
+    }
+  }
+  .bubble-left{
+    @include flex($dir: row, $jc:space-between, $gap: 50px, $ai:center);
+    img:nth-child(2){
+      top: 350px;
+    }
+  }
+  .section-bubble{
+    padding: 10vh 6vw;
+    text-align: left;
+    &::before{
+      top:10vh;
+    }
+    img:first-child{
+      margin: 0 5vw;
+    }
+    div{
+      align-items: flex-start;
+      button{
+        align-self: flex-start;
+      }
+    }
+  }
+}

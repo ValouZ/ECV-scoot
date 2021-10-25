@@ -2,26 +2,47 @@
   @include flex($dir: column, $jc:center, $ai:center);
   background-color: $dark-navy;
   padding: 10vh 6vw;
+  position: relative;
+  overflow: hidden;
+  .footer-section-download-app__circle{
+    content:"";
+    position: absolute;
+    width: 347px;
+    height: 347px;
+    border-radius: 50%;
+    border: 15px solid $light-grey;
+    opacity: 0.1;
+    z-index: 1;
+    top: 50%;
+  }
+  .circle-one{
+    right: 600.5px;
+  }
+  .circle-two{
+    right: 213.5px;
+  }
+  .circle-three{
+    right: -173.5px;
+    background-color: $light-grey;
+  }
   h3{
     color: $white;
     margin-bottom: 5vh;
     text-align: center;
+    z-index: 2;
   }
-  .section-download-app-links{
-    @include flex($jc:center, $ai:center);
+  .section-download-app__links{
+    @include flex($jc:center, $ai:center, $gap: 15px);
     flex-wrap: wrap;
     font-family: "Space Mono";
+    z-index: 2;
     a{
       background-color: $light-grey;
       border-radius: 4px;
       padding: 0.5vh 1vh;
-      @include flex($jc:center, $ai:center);
-      &:nth-child(2){
-        margin-left: 2vh;
-      }
+      @include flex($jc:center, $ai:center, $gap: 10px);
       div{
         color: $dark-navy;
-        margin-left: 2vh;
         p:first-child{
           font-size: 10px;
           height: 15px;
@@ -38,10 +59,8 @@
   @include flex($dir: column, $jc:center, $ai:center);
   background-color: #333A44;
   padding: 4vh 6vw;
-  flex-wrap: wrap;
   ul:first-child{
-    @include flex($dir: column, $ai:center);
-    margin-top: 2vh;
+    @include flex($dir: column, $ai:center, $gap:10px);
     flex-wrap: wrap;
     li{
       margin-top: 2vh;
@@ -54,7 +73,7 @@
       }
     }
   }
-  ul{
+  ul:nth-child(3){
     margin-top: 3vh;
     @include flex($ai:center);
     li{
@@ -67,17 +86,16 @@
   }
 }
 
-@media screen and (min-width: 422px){
+@media screen and (min-width: 768px){
   .footer-section-links{
     @include flex($dir:row, $jc:space-between, $ai:center);
     ul:first-child{
-      @include flex($dir: row, $ai:center);
-      margin-top: 0;
+      @include flex($dir: row, $ai:center, $gap:15px);
       li{
         margin-top: 0;
       }
     }
-    ul{
+    ul:nth-child(3){
       margin-top: 0;
       li{
         margin: 0 1vw;
