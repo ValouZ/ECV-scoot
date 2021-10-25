@@ -1,7 +1,96 @@
-.container{
+.section-topcontainer{
     width: 100%;
-    height: 500px;
-
-    background-image: url('../../assets/image/home_bg.jpg');
+    min-height: 500px;
+    padding: 13vh 10vw;
+    background-image: linear-gradient(0deg, rgba(47,59,89,0.7) 0%, rgba(47,59,89,0.7) 100%), url('../../assets/image/home_bg.jpg');
     background-size: cover;
+    background-position: right bottom;
+    color: $white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    article{
+      @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
+      margin-bottom: 5vh;
+      h1, p, img, button{
+        z-index: 2;
+      }
+      h1{
+        color: $white;
+        font-size: 40px;
+        line-height: 40px;
+      }
+      img{
+        position: absolute;
+        left: -300px;
+        bottom: 3vh;
+      }
+    }
+}
+
+@media screen and (min-width: 768px){
+  .section-topcontainer{ 
+    article{
+      margin-bottom: 8vh;
+      img {
+        left: -150px;
+      }
+      .section-topcontainer__circle{
+        content:"";
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        border: 3px solid $white;
+        z-index: 1;
+        bottom: 3vh;
+      }
+      .topcontainer-circle-one{
+        right: 133.5px;
+      }
+      .topcontainer-circle-two{
+        right: 51.5px;
+      }
+      .topcontainer-circle-three{
+        right: -31.5px;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .section-topcontainer{ 
+    text-align: left;
+    article{
+      align-items: flex-start;
+      width: 40%;
+      margin-left: 10vw;
+      h1{
+        font-size: 56px;
+        line-height: 56px;
+        &::before{
+          content:"";
+          position: absolute;
+          left: 0;
+          width: 17%;
+          height: 0px;
+          bottom: 13vh;
+          transform: translateY(-21vh);
+          position: absolute;
+          border: 9px solid $yellow;
+        }
+      }
+      p, button{
+        margin-left: 2vw;
+      }
+      img{
+        bottom: 21vh;
+        left: 55%;
+      }
+      .section-topcontainer__circle{
+        bottom: 21vh;
+      }
+    }
+  }
 }
