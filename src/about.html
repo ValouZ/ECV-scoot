@@ -18,26 +18,59 @@
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="./index.html" class="logo"><img src="./assets/image/dark-logo.svg" width="110px" height="auto"></a>
-        <ul>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./location.html">Location</a></li>
-          <li><a href="./careers.html">Careers</a></li>
-        </ul>
-      </nav>
-      <button class="button" type="button">Get scootin</button>
+    <header class="header">
+      <div class="header__brand">
+        <a href="./index.html"><img class="header__brand--label" src="./assets/image/dark-logo.svg"></a>
+      </div>
+      <div class="header__nav">
+          <nav class="header__nav">
+            <ul>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./location.html">Locations</a></li>
+              <li><a href="./careers.html">Carrers</a></li>
+            </ul>
+          </nav>
+      </div>
+      <button class="button header__btn" type="button"> Get Scootin</button>
     </header>
+
     <main>
-      <h1>About</h1>
+      <section class="section-simpletopcontainer about-background">
+        <h1>About</h1>
+        <div class="section-simpletopcontainer__circle topcontainer-circle-one"></div>
+        <div class="section-simpletopcontainer__circle topcontainer-circle-two"></div>
+        <div class="section-simpletopcontainer__circle topcontainer-circle-three"></div>
+      </section>
+      
+      <section>
+        <article class="section-bubble bubble-right">
+          <img src="./assets/image/about_bubble1.jpg" alt="Someaone watchinng her phone" width="311px" height="311px">
+          <img src="./assets/image/arrow.svg" alt="Yellow arrow" width="735px" height="auto">
+          <div>
+            <h2>Mobility for the digital era</h2>
+            <p>Getting around should be simple (and even fun!) for everyone. We embrace technology to provide low cost, smart access to scooters at your fingertips.</p>
+          </div>
+        </article>
+        <article class="section-bubble bubble-left">
+          <img src="./assets/image/about_bubble2.jpg" alt="A yellow trammay" width="311px" height="311px">
+          <img src="./assets/image/arrow.svg" alt="Yellow arrow" width="735px" height="auto">
+          <div>
+            <h2>Better urban living</h2>
+            <p>We’re helping connect cities and bring people closer together. Our scooters are also fully-electric and we offset the minimal carbon footprint for each ride.</p>
+          </div>
+        </article>
+      </section>
     </main>
-    
 
     <footer>
       <section class="footer-section-download-app">
+        <div>
+          <div class="footer-section-download-app__circle circle-one"></div>
+          <div class="footer-section-download-app__circle circle-two"></div>
+          <div class="footer-section-download-app__circle circle-three"></div>
+        </div>
         <h3>Sign up and Scoot off today</h3>
-        <div class="section-download-app-links">
+        <div class="section-download-app__links">
           <a href="">
             <img src="./assets/image/apple.svg">
             <div>
@@ -55,7 +88,7 @@
         </div>
       </section>
       <section class="footer-section-links">
-        <a href="./index.html" class="logo"><img src="./assets/image/white-logo.svg" width="110px" height="auto"></a>
+        <a href="index.html" class="logo"><img src="./assets/image/white-logo.svg" width="110px" height="auto"></a>
         <nav>
           <ul>
             <li><a href="./about.html">About</a></li>

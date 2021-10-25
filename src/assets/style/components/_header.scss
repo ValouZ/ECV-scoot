@@ -7,7 +7,6 @@
     column-gap: 4%;
     background: $white;
 
-  
     &__brand{
         align-self: center;
         justify-self: flex-start;
@@ -19,6 +18,9 @@
             padding-right: 2%;
             a{
                 @include font($ff: "Space Mono", $fw: bold, $fs:15px);
+                &:hover{
+                  color: $yellow;
+                }
             }
         }
     }
