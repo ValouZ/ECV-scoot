@@ -11,7 +11,6 @@
     overflow: hidden;
     article{
       @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
-      margin-bottom: 5vh;
       h1, p, img, button{
         z-index: 2;
       }

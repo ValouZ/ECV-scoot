@@ -1,16 +1,16 @@
 .header {
     position: relative;
-    padding: 36px 24px;
+    padding: 2vh 6vw;
 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: auto 1fr 1fr;
     column-gap: 4%;
     background: $white;
 
   
     &__brand{
         align-self: center;
-        justify-self: flex-end;
+        justify-self: flex-start;
     }
     &__nav{
         align-self: center;
@@ -18,12 +18,13 @@
             display: inline;
             padding-right: 2%;
             a{
-                @include font($ff: Space Mono, $fw: bold, $fs:15px);
+                @include font($ff: "Space Mono", $fw: bold, $fs:15px);
             }
         }
     }
     &__btn{
         align-self: center;
+        justify-self: flex-end;
     }
 }
 
