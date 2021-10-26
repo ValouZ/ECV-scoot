@@ -18,3 +18,26 @@
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .button{
+        border: solid $yellow;
+        background-color: $yellow;
+        color: $white;
+        width: 100px;
+        height: 33px;
+        font-family: Space Mono;
+        font-weight: bold;
+        font-size: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            border: solid $yellow;
+            background-color: initial;
+            color: $yellow;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+    }
+}
