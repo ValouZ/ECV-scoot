@@ -10,6 +10,10 @@
     &__brand{
         align-self: center;
         justify-self: flex-start;
+
+        &--label{
+
+        }
     }
     &__nav{
         align-self: center;
@@ -30,7 +34,7 @@
     }
 }
 
-@media screen and (max-width: 422px) {
+@media screen and (max-width: 600px) {
     .header {
         position: relative;
         padding: 20px 10px;
@@ -49,9 +53,8 @@
             align-self: center;
             li{
                 display: inline;
-                padding-right: 2%;
                 a{
-                    @include font($ff: Space Mono, $fw: bold, $fs:60%);
+                    @include font($ff: Space Mono, $fw: bold, $fs:9px);
                 }
             }
         }
@@ -61,11 +64,11 @@
     }
 }
 
-@media screen and (max-width:422px){
-    h2 {
-        font-family: 'Space Mono';
-        font-weight: bold;
-        font-size: 30px;
-        letter-spacing: -2.14286px;
-      }
+
+@media screen and (min-width:320px) and (max-width: 370px) {
+    a{
+        @include font($ff: Space Mono, $fw: bold, $fs:8px);
+    }
 }
+
+
