@@ -1,126 +1,168 @@
-.bubble-right {
-  @include tablet {
-    &:before {
-      right: -300px;
-      top: 350px;
-    }
-  }
+$bubble-size: 445px;
 
-  @include desktop {
-    @include flex(
-      $dir: row-reverse,
-      $jc: space-between,
-      $gap: 50px,
-      $ai: center
-    );
-  }
-
-  img:nth-child(2) {
-    left: 6vw;
-    top: 205px;
-
-    @include tablet {
-      left: initial;
-      right: 0;
-      top: 300px;
-    }
+.bubbles {
+  &__bubble {
+    position: relative;
+    margin: 5vh 8vw;
+    @include flex($dir: column, $jc: center, $ai: center, $gap: 40px);
+    text-align: center;
 
     @include desktop {
-      top: 400px;
-    }
-  }
-}
-.bubble-left {
-  @include tablet {
-    &:before {
-      left: -300px;
-      top: 300px;
-    }
-  }
-
-  @include desktop {
-    @include flex($dir: row, $jc: space-between, $gap: 50px, $ai: center);
-  }
-  img:nth-child(2) {
-    right: 6vw;
-    top: 180px;
-    transform: rotate(180deg);
-
-    @include tablet {
-      right: initial;
-      left: 0;
-      top: 250px;
+      margin: 10vh 11.5vw;
+      text-align: left;
+      @include flex($dir: row, $jc: space-between, $gap: 50px, $ai: center);
     }
 
-    @include desktop {
-      top: 350px;
-    }
-  }
-}
-.section-bubble {
-  position: relative;
-  padding: 5vh 6vw;
-  @include flex($dir: column, $jc: center, $ai: center, $gap: 40px);
-  text-align: center;
-  overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
 
-  &::before {
-    content: '';
-    position: absolute;
+      @include tablet {
+        top: 0;
+        background-color: $light-grey;
+        height: $bubble-size;
+        width: $bubble-size;
+        border-radius: 50%;
+        z-index: 1;
+      }
 
-    @include tablet {
-      background-color: $light-grey;
-      height: 445px;
-      width: 445px;
-      border-radius: 50%;
-      top: 5vh;
-      z-index: 1;
-    }
-
-    @include desktop {
-      top: 10vh;
-    }
-  }
-
-  @include desktop {
-    padding: 10vh 6vw;
-    text-align: left;
-  }
-
-  img:first-child {
-    border-radius: 50%;
-    z-index: 3;
-
-    @include tablet {
-      height: 445px;
-      width: 445px;
-    }
-
-    @include desktop{
-      margin: 0 5vw;
-    }
-  }
-  img:nth-child(2) {
-    position: absolute;
-    z-index: 4;
-  }
-  div {
-    @include flex($dir: column, $jc: center, $ai: center, $gap: 30px);
-
-    @include tablet{
-      align-items: flex-start;
-    }
-    button{
-      @include desktop{
-        align-self: flex-start;
+      @include desktop {
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
-    h2 {
-      font-size: 32px;
-      line-height: 32px;
+
+    .bubbles__img {
+      border-radius: 50%;
+      z-index: 3;
+      width: 311px;
+      height: 311px;
+
+      @include tablet {
+        height: $bubble-size;
+        width: $bubble-size;
+      }
+
+      @include desktop {
+        // margin: 0 5vw;
+      }
     }
-    p {
-      color: $grey;
+    .bubbles__arrow {
+      position: absolute;
+      z-index: 4;
+
+      @include desktop {
+        bottom: 0;
+      }
+    }
+
+    .bubbles__content {
+      @include flex($dir: column, $jc: center, $ai: center, $gap: 32px);
+
+      @include tablet {
+        gap: 40px;
+      }
+
+      @include desktop {
+        align-items: flex-start;
+        gap: 0;
+        width: 31%;
+        min-width: 445px;
+      }
+
+      h2 {
+        @include desktop {
+          margin-bottom: 24px;
+        }
+      }
+      p {
+        color: $grey;
+      }
+      button {
+        @include desktop {
+          margin-top: 40px;
+          align-self: flex-start;
+        }
+      }
+    }
+
+    &--right {
+      &:before {
+        @include tablet {
+          right: -410px;
+        }
+        @include desktop {
+          right: -500px;
+        }
+      }
+
+      @include desktop {
+        flex-direction: row-reverse;
+      }
+
+      .bubbles__arrow {
+        left: 0;
+        top: 160px;
+
+        @include tablet {
+          left: initial;
+          right: -8vw;
+          top: 300px;
+        }
+
+        @include desktop {
+          right: -11.5vw;
+        }
+      }
+
+      &:not(:first-child) {
+        .bubbles__arrow {
+          @include desktop {
+            right: -550px;
+          }
+        }
+      }
+    }
+
+    &--left {
+      &:before {
+        @include tablet {
+          left: -410px;
+        }
+        @include desktop {
+          left: -500px;
+        }
+      }
+      .bubbles__arrow {
+        right: 0;
+        top: 160px;
+
+        @include tablet {
+          right: initial;
+          left: -8vw;
+          top: 250px;
+        }
+
+        @include desktop {
+          left: -11.5vw;
+          top: 350px;
+        }
+      }
+      &:not(:first-child) {
+        .bubbles__arrow {
+          @include desktop {
+            left: -550px;
+          }
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      .bubbles__arrow {
+        @include desktop {
+          top: 0;
+        }
+      }
     }
   }
 }
