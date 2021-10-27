@@ -38,10 +38,14 @@ h1 {
 
 h2 {
   font-family: 'Space Mono';
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 48px;
-  letter-spacing: -2.14286px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -1.42857px;
+  @include tablet{
+    font-size: 48px;
+    letter-spacing: -2.14286px;
+  }
 }
 
 h3 {
@@ -58,4 +62,8 @@ h4 {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: -1.07143px;
+}
+
+main{
+  overflow: hidden;
 }
