@@ -61,6 +61,18 @@
 @media screen and (min-width: 1500px){
   .section-topcontainer{ 
     text-align: left;
+    position: relative;
+    &::before{
+      content:"";
+      position: absolute;
+      left: 0;
+      width: 17%;
+      height: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      border: 9px solid $yellow;
+    }
     article{
       align-items: flex-start;
       width: 40%;
@@ -68,17 +80,6 @@
       h1{
         font-size: 56px;
         line-height: 56px;
-        &::before{
-          content:"";
-          position: absolute;
-          left: 0;
-          width: 17%;
-          height: 0px;
-          bottom: 13vh;
-          transform: translateY(-21vh);
-          position: absolute;
-          border: 9px solid $yellow;
-        }
       }
       p, button{
         margin-left: 2vw;
