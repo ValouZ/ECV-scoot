@@ -1,7 +1,7 @@
 .section-topcontainer{
     width: 100%;
     min-height: 500px;
-    padding: 13vh 10vw;
+    padding: 115px 10vw 180px;
     background-image: linear-gradient(0deg, rgba(47,59,89,0.7) 0%, rgba(47,59,89,0.7) 100%), url('../../assets/image/home_bg.jpg');
     background-size: cover;
     background-position: right bottom;
@@ -10,14 +10,15 @@
     position: relative;
     overflow: hidden;
     article{
-      @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
-      h1, p, img, button{
-        z-index: 2;
-      }
+      @include flex($dir: column, $jc:center, $ai:center);
       h1{
         color: $white;
         font-size: 40px;
         line-height: 40px;
+        margin-bottom: 24px;
+      }
+      p{
+        margin-bottom: 32px;
       }
       img{
         position: absolute;
