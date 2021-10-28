@@ -99,10 +99,9 @@ $bubble-size: 445px;
       @include desktop {
         flex-direction: row-reverse;
       }
-      
 
       .bubbles__arrow {
-        left: 0;
+        left: 10%;
         top: 160px;
 
         @include tablet {
@@ -118,6 +117,9 @@ $bubble-size: 445px;
 
       &:not(:first-child) {
         .bubbles__arrow {
+          @include tablet {
+            right: -350px;
+          }
           @include desktop {
             right: -550px;
           }
@@ -135,7 +137,7 @@ $bubble-size: 445px;
         }
       }
       .bubbles__arrow {
-        right: 0;
+        right: 10%;
         top: 160px;
 
         @include tablet {
@@ -151,9 +153,11 @@ $bubble-size: 445px;
       }
       &:not(:first-child) {
         .bubbles__arrow {
+          @include tablet {
+            left: -350px;
+          }
           @include desktop {
             left: -550px;
-            transform: rotate(180deg);
           }
         }
       }
@@ -161,9 +165,7 @@ $bubble-size: 445px;
 
     &:not(:first-child) {
       .bubbles__arrow {
-        @include desktop {
-          top: 0;
-        }
+        top: 0;
       }
     }
   }

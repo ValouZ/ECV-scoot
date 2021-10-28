@@ -23,10 +23,8 @@
 
   @include desktop {
     @include flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 48px);
-    text-align: left;
     padding: 0 6vw 160px;
     margin: 120px 0;
-    position: relative;
     &::before {
       transform: translateY(calc(-50% + calc(var(--figure-icone-size) / 2)));
       width: 68%;
@@ -57,6 +55,7 @@
     }
     p {
       color: $grey;
+      max-width: 650px;
     }
   }
 
