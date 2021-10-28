@@ -1,0 +1,3 @@
+.faq{
+    @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
+}
