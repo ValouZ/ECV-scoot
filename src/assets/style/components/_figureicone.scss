@@ -1,5 +1,5 @@
-.section-figure-icones{
-  padding: 5vh 6vw;
+.figure-icones{
+  margin: 120px 6vw;
   text-align: center;
   @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
   @include between-desktop-tablet{
