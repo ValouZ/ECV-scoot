@@ -62,7 +62,7 @@
 
 
 @media screen and (min-width:320px) and (max-width: 370px) {
-    a{
+    .header a{
         @include font($ff: Space Mono, $fw: bold, $fs:8px);
     }
 }

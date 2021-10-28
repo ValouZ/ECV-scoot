@@ -1,10 +1,10 @@
-.footer-section-download-app{
+.footer-download-app{
   @include flex($dir: column, $jc:center, $ai:center);
   background-color: $dark-navy;
   padding: 10vh 6vw;
   position: relative;
   overflow: hidden;
-  .footer-section-download-app__circle{
+  .footer-download-app__circle{
     content:"";
     position: absolute;
     width: 347px;
@@ -31,7 +31,7 @@
     text-align: center;
     z-index: 2;
   }
-  .section-download-app__links{
+  .footer-download-app__links{
     @include flex($jc:center, $ai:center, $gap: 15px);
     flex-wrap: wrap;
     font-family: "Space Mono";
@@ -55,18 +55,36 @@
   }
 }
 
-.footer-section-links{
-  @include flex($dir: column, $jc:center, $ai:center);
+.footer-links{
+  display: grid;
+  grid-template: auto auto auto / 100%;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
   background-color: #333A44;
   padding: 4vh 6vw;
+  text-align: center;
+  @include tablet{
+    grid-template: 100% / auto 1fr auto;
+    gap:60px;
+  }
   ul:first-child{
     @include flex($dir: column, $ai:center, $gap:10px);
     flex-wrap: wrap;
+    @include tablet{
+      flex-direction: row;
+      gap:32px;
+    }
     li{
       margin-top: 2vh;
+      @include tablet{
+        margin-top: 0;
+      }
     }
     a{
       color: $grey;
+      font-family: "Space Mono";
+      font-weight: bold;
       &:hover{
         color: $yellow;
         transition: 0.3s;
@@ -75,31 +93,22 @@
   }
   ul:nth-child(3){
     margin-top: 3vh;
-    @include flex($ai:center);
+    @include flex($ai:center, $jc:center);
+    gap: 10px;
+    @include tablet{
+      margin-top: 0;
+      gap: 24px;
+      justify-content:flex-end;
+    }
     li{
       margin: 0 2vw;
+      @include tablet{
+        margin: 0;
+      }
       a:hover{
         filter: brightness(13);
         transition: 0.3s;
       }
     }  
-  }
-}
-
-@media screen and (min-width: 768px){
-  .footer-section-links{
-    @include flex($dir:row, $jc:space-between, $ai:center);
-    ul:first-child{
-      @include flex($dir: row, $ai:center, $gap:15px);
-      li{
-        margin-top: 0;
-      }
-    }
-    ul:nth-child(3){
-      margin-top: 0;
-      li{
-        margin: 0 1vw;
-      } 
-    }
   }
 }
