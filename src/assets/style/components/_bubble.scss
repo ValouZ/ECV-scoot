@@ -99,6 +99,7 @@ $bubble-size: 445px;
       @include desktop {
         flex-direction: row-reverse;
       }
+      
 
       .bubbles__arrow {
         left: 0;
