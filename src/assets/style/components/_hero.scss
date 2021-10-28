@@ -28,7 +28,7 @@
       grid-column-end:span 2;
     }
   }
-  h1{
+  .hero__title{
     color: $white;
     margin-top: 50px;
     margin-bottom: 24px;
@@ -39,7 +39,7 @@
       text-align: left;
     }
   }
-  p{
+  .hero__text{
     margin-bottom: 34px;
     @include desktop{
       grid-column-start:3;
