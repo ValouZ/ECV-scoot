@@ -1,43 +1,20 @@
-.button{
-    border: solid $yellow;
-    background-color: $yellow;
-    color: $white;
-    width: 180px;
-    height: 53px;
-    font-family: Space Mono;
-    font-weight: bold;
-    font-size: 15px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    &:hover{
-        border: solid $yellow;
-        background-color: initial;
-        color: $yellow;
-        transition: 0.4s;
-        cursor: pointer;
-    }
-}
+.button {
+  @include flex($jc: center, $ai: center);
+  border: 3px solid $yellow;
+  background-color: $yellow;
+  color: $white;
+  width: 180px;
+  height: 53px;
+  font-family: Space Mono;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  cursor: pointer;
+  transition: 0.4s;
 
-@media screen and (max-width: 600px) {
-    .button{
-        border: solid $yellow;
-        background-color: $yellow;
-        color: $white;
-        width: 100px;
-        height: 33px;
-        font-family: Space Mono;
-        font-weight: bold;
-        font-size: 10px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        &:hover{
-            border: solid $yellow;
-            background-color: initial;
-            color: $yellow;
-            transition: 0.4s;
-            cursor: pointer;
-        }
-    }
+  &:hover {
+    border-color: $yellow;
+    background-color: unset;
+    color: $yellow;
+  }
 }

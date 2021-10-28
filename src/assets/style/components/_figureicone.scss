@@ -1,75 +1,70 @@
-.section-figure-icones{
-  padding: 5vh 6vw;
+.figure-icones {
+  margin: 120px 6vw;
   text-align: center;
-  @include flex($dir: column, $jc:center, $ai:center, $gap: 50px);
-  @include between-desktop-tablet{
-    text-align: left;
-    padding: 10vh 6vw;
+  @include flex($dir: column, $jc: center, $ai: center, $gap: 48px);
+
+  @include tablet {
     position: relative;
-      &::before{
-        content:"";
-        width: 0px;
-        height: 72%;
-        top: 0;
-        position: absolute;
-        left: 6vw;
-        transform: translateX(39px);
-        border: 10px solid $light-grey;
-        z-index: 1;
-      }
-    }
-    @include desktop{
-      @include flex($dir: row, $jc:flex-start, $ai:flex-start, $gap: 50px);
-      text-align: left;
-      padding: 10vh 6vw;
-      position: relative;
-      &::before{
-        content:"";
-        width: 68%;
-        height: 0px;
-        top:12.5vh;
-        left:0;
-        position: absolute;
-        border: 10px solid $light-grey;
+    text-align: left;
+    margin: 0 6vw;
+    padding: 10vh 0;
+    gap: 40px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(calc(-50% + calc(var(--figure-icone-size) / 2)));
+      width: 15px;
+      height: 75%;
+      background: $light-grey;
     }
   }
-  article{
-    @include flex($dir: column, $jc:center, $ai:center);
-    @include between-desktop-tablet{
+
+  @include desktop {
+    @include flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 48px);
+    text-align: left;
+    padding: 0 6vw 160px;
+    margin: 120px 0;
+    position: relative;
+    &::before {
+      transform: translateY(calc(-50% + calc(var(--figure-icone-size) / 2)));
+      width: 68%;
+      height: 15px;
+    }
+  }
+
+  &__article {
+    @include flex($dir: column, $jc: center, $ai: center);
+    @include between-desktop-tablet {
       z-index: 3;
       width: 100%;
       display: grid;
       grid-template-columns: 100px 1fr;
-      gap: 50px;
+      gap: 48px;
     }
-    @include desktop{
+    @include desktop {
       z-index: 3;
     }
-    h4{
+    h4 {
       font-weight: bold;
       color: $dark-navy;
-      margin:20px 0;
+      margin: 24px 0;
       font-size: 20px;
-      @include between-desktop-tablet{
-        margin-top:0;
+      @include between-desktop-tablet {
+        margin-top: 0;
       }
     }
-    div:first-child{
-      @include flex($jc:center, $ai:center);
-      background-color: $yellow;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      @include between-desktop-tablet{
-        justify-self: center;
-        align-self: flex-start;
-      }
-      @include desktop{
-        align-self: flex-start;
-      }
+    p {
+      color: $grey;
     }
-    p{
-      color:$grey;
+  }
+
+  &__icone {
+    width: var(--figure-icone-size);
+    border-radius: 50%;
+    @include tablet {
+      align-self: flex-start;
     }
   }
 }
