@@ -1,8 +1,7 @@
+@import 'general/mixins';
 @import 'general/variables';
-@import 'general/mixins';;
 @import 'general/reset';
 @import 'general/arrow';
-
 
 @import 'components/header';
 @import 'components/footer';
@@ -13,4 +12,3 @@
 @import 'components/figureicone';
 @import 'components/bubble';
 @import 'components/value';
-

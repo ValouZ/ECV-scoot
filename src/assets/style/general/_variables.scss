@@ -5,3 +5,10 @@ $dark-navy: #495567;
 $grey: #939caa;
 $light-grey: #e5ecf4;
 $snow: #f2f5f9;
+
+:root{
+  --figure-icone-size: 56px;
+  @include tablet{
+  --figure-icone-size: 96px;
+  }
+}
