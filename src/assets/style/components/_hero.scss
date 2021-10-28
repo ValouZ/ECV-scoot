@@ -1,7 +1,7 @@
 .hero{
   width: 100%;
   min-height: 500px;
-  padding: 13vh 0;
+  padding: 5vh 0;
   background-image: linear-gradient(0deg, rgba(47,59,89,0.7) 0%, rgba(47,59,89,0.7) 100%), url('../../assets/image/home_bg.jpg');
   background-size: cover;
   background-position: right bottom;
@@ -20,7 +20,7 @@
     gap: 20px 20px;  
   }
   h1, p, button{
-    margin: 3vh 10vw;
+    margin: 0 10vw;
     align-self: center;
     justify-self: center;
     @include tablet{
@@ -30,9 +30,20 @@
   }
   h1{
     color: $white;
+    margin-top: 50px;
+    margin-bottom: 24px;
     @include desktop{
       grid-column-start:2;
       grid-column-end:span 2;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  p{
+    margin-bottom: 34px;
+    @include desktop{
+      grid-column-start:3;
+      grid-column-end:span 1;
       margin: 0;
       text-align: left;
     }
@@ -49,12 +60,6 @@
       margin: 0;
       align-self: flex-start;
       margin-top: 50px;
-    }
-    p{
-      grid-column-start:3;
-      grid-column-end:span 1;
-      margin: 0;
-      text-align: left;
     }
     button{
       grid-column-start:3;
