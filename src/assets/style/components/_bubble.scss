@@ -136,16 +136,22 @@ $bubble-size: 445px;
       .bubbles__arrow {
         right: 0;
         top: 160px;
+        transform: rotate(180deg);
+        transform: scaleX(-1);
 
         @include tablet {
           right: initial;
           left: -8vw;
           top: 250px;
+          transform: rotate(180deg);
+          transform: scaleX(-1);
         }
 
         @include desktop {
           left: -11.5vw;
           top: 350px;
+          transform: rotate(180deg);
+          transform: scaleX(-1);
         }
       }
       &:not(:first-child) {
@@ -153,6 +159,7 @@ $bubble-size: 445px;
           @include desktop {
             left: -550px;
             transform: rotate(180deg);
+            transform: scaleX(-1);
           }
         }
       }
