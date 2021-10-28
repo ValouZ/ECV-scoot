@@ -152,6 +152,7 @@ $bubble-size: 445px;
         .bubbles__arrow {
           @include desktop {
             left: -550px;
+            transform: rotate(180deg);
           }
         }
       }
