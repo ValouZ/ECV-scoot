@@ -1,31 +1,32 @@
 .figure-icones {
-  margin: 120px 6vw;
+  margin: 0 var(--main-margin);
   text-align: center;
   @include flex($dir: column, $jc: center, $ai: center, $gap: 48px);
 
   @include tablet {
     position: relative;
     text-align: left;
-    margin: 0 6vw;
-    padding: 10vh 0;
     gap: 40px;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
+      top: calc(-1 * var(--main-gap));
       left: 0;
       transform: translateX(calc(-50% + calc(var(--figure-icone-size) / 2)));
       width: 15px;
-      height: 75%;
+      height: calc(
+        var(--main-gap) + calc(100% - calc(var(--figure-icone-size) / 2))
+      );
       background: $light-grey;
     }
   }
 
   @include desktop {
     @include flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 48px);
-    padding: 0 6vw 160px;
-    margin: 120px 0;
+    margin: 0;
+    padding: 0 var(--main-margin);
     &::before {
+      top: 0;
       transform: translateY(calc(-50% + calc(var(--figure-icone-size) / 2)));
       width: 68%;
       height: 15px;

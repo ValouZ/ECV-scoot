@@ -1,11 +1,15 @@
-.footer-download-app{
-  @include flex($dir: column, $jc:center, $ai:center);
+footer {
+  margin-top: var(--main-gap);
+}
+
+.footer-download-app {
+  @include flex($dir: column, $jc: center, $ai: center);
   background-color: $dark-navy;
   padding: 10vh 6vw;
   position: relative;
   overflow: hidden;
-  .footer-download-app__circle{
-    content:"";
+  .footer-download-app__circle {
+    content: "";
     position: absolute;
     width: 347px;
     height: 347px;
@@ -15,39 +19,39 @@
     z-index: 1;
     top: 50%;
   }
-  .circle-one{
+  .circle-one {
     right: 600.5px;
   }
-  .circle-two{
+  .circle-two {
     right: 213.5px;
   }
-  .circle-three{
+  .circle-three {
     right: -173.5px;
     background-color: $light-grey;
   }
-  h3{
+  h3 {
     color: $white;
     margin-bottom: 5vh;
     text-align: center;
     z-index: 2;
   }
-  .footer-download-app__links{
-    @include flex($jc:center, $ai:center, $gap: 15px);
+  .footer-download-app__links {
+    @include flex($jc: center, $ai: center, $gap: 15px);
     flex-wrap: wrap;
     font-family: "Space Mono";
     z-index: 2;
-    a{
+    a {
       background-color: $light-grey;
       border-radius: 4px;
       padding: 0.5vh 1vh;
-      @include flex($jc:center, $ai:center, $gap: 10px);
-      div{
+      @include flex($jc: center, $ai: center, $gap: 10px);
+      div {
         color: $dark-navy;
-        p:first-child{
+        p:first-child {
           font-size: 10px;
           height: 15px;
         }
-        p:nth-child(2){
+        p:nth-child(2) {
           font-weight: bold;
         }
       }
@@ -55,60 +59,60 @@
   }
 }
 
-.footer-links{
+.footer-links {
   display: grid;
   grid-template: auto auto auto / 100%;
-  gap:30px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
-  background-color: #333A44;
+  background-color: #333a44;
   padding: 4vh 6vw;
   text-align: center;
-  @include tablet{
+  @include tablet {
     grid-template: 100% / auto 1fr auto;
-    gap:60px;
+    gap: 60px;
   }
-  ul:first-child{
-    @include flex($dir: column, $ai:center, $gap:10px);
+  ul:first-child {
+    @include flex($dir: column, $ai: center, $gap: 10px);
     flex-wrap: wrap;
-    @include tablet{
+    @include tablet {
       flex-direction: row;
-      gap:32px;
+      gap: 32px;
     }
-    li{
+    li {
       margin-top: 2vh;
-      @include tablet{
+      @include tablet {
         margin-top: 0;
       }
     }
-    a{
+    a {
       color: $grey;
       font-family: "Space Mono";
       font-weight: bold;
-      &:hover{
+      &:hover {
         color: $yellow;
         transition: 0.3s;
       }
     }
   }
-  ul:nth-child(3){
+  ul:nth-child(3) {
     margin-top: 3vh;
-    @include flex($ai:center, $jc:center);
+    @include flex($ai: center, $jc: center);
     gap: 10px;
-    @include tablet{
+    @include tablet {
       margin-top: 0;
       gap: 24px;
-      justify-content:flex-end;
+      justify-content: flex-end;
     }
-    li{
+    li {
       margin: 0 2vw;
-      @include tablet{
+      @include tablet {
         margin: 0;
       }
-      a:hover{
+      a:hover {
         filter: brightness(13);
         transition: 0.3s;
       }
-    }  
+    }
   }
 }

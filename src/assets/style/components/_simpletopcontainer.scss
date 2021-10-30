@@ -1,5 +1,6 @@
 .section-simpletopcontainer{
   height: 160px;
+  width: 100%;
   padding: 0 6vw;
   @include flex($ai:center, $jc:center);
   background-repeat: no-repeat;
