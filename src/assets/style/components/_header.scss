@@ -1,15 +1,19 @@
 .header {
   position: relative;
-  margin: 2vh 6vw;
+  margin: 2vh 4vw;
 
   display: grid;
   grid-template-columns: auto 1fr 1fr;
-  column-gap: 4%;
+  column-gap: 2%;
   background: $white;
 
   &__brand {
     align-self: center;
     justify-self: flex-start;
+
+    &--label{
+      width: 80%;
+    }
   }
   &__nav {
     align-self: center;
@@ -17,7 +21,7 @@
       display: inline;
       padding-right: 2%;
       a {
-        @include font($ff: "Space Mono", $fw: bold, $fs: 15px);
+        @include font($ff: "Space Mono", $fw: bold, $fs: 9px);
         &:hover {
           color: $yellow;
         }
@@ -27,40 +31,5 @@
   &__btn {
     align-self: center;
     justify-self: flex-end;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    position: relative;
-    margin: 20px 10px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1%;
-    background: $white;
-
-    &__brand {
-      align-self: center;
-      justify-self: center;
-    }
-    &__nav {
-      align-self: center;
-      li {
-        display: inline;
-        a {
-          @include font($ff: Space Mono, $fw: bold, $fs: 9px);
-        }
-      }
-    }
-    &__btn {
-      align-self: center;
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 370px) {
-  .header a {
-    @include font($ff: Space Mono, $fw: bold, $fs: 8px);
   }
 }
