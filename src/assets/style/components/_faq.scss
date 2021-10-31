@@ -1,7 +1,7 @@
 .faq {
   @include flex($dir: column, $jc: center, $ai: center, $gap: 50px);
 
-  &--title {
+  &__title {
     @include flex($dir: column, $jc: center, $ai: center, $gap: 30px);
 
     @include tablet {
@@ -20,12 +20,19 @@
       width: 90%;
       background-color: $light-grey;
       padding: 4%;
-      
-      &:hover{
-        .article--help{
-            display: none;
-        }
-    }
+            &:hover{
+                .article--question{
+                    img {
+                        align-self: center;
+                        justify-self: flex-end;
+                        transition: 0.4s;
+                        transform: rotate(180deg);
+                    }
+                }
+                .article--help{
+                    display: none;
+                }
+            }
       @include tablet {
         grid-column: 2;
       }
