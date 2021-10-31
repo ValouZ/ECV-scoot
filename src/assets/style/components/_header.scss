@@ -27,8 +27,9 @@
       a {
         @include font($ff: "Space Mono", $fw: bold, $fs: 9px);
         @include tablet{
-          
+          @include font($ff: "Space Mono", $fw: bold, $fs: 15px);
         }
+        
         &:hover {
           color: $yellow;
         }

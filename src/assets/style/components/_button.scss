@@ -12,7 +12,15 @@
   transition: 0.4s;
 
   @include tablet{
+    @include font($ff: "Space Mono", $fw: bold, $fs: 14px, $co: $white,);
+    width: 144px;
+    height: 45px;
+  }
 
+  @include desktop{
+    @include font($ff: "Space Mono", $fw: bold, $fs: 16px, $co: $white,);
+    width: 200px;
+    height: 60px;
   }
 
   &:hover {
