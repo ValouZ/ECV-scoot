@@ -17,6 +17,10 @@
 
     &--label{
       width: 90%;
+
+      @include tablet{
+        width: 100%;
+      }
     }
   }
   &__nav {
@@ -29,7 +33,10 @@
         @include tablet{
           @include font($ff: "Space Mono", $fw: bold, $fs: 15px);
         }
-        
+        @include desktop{
+          @include font($ff: "Space Mono", $fw: bold, $fs: 20px);
+        }
+
         &:hover {
           color: $yellow;
         }
