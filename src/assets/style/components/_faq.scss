@@ -1,70 +1,66 @@
-.faq{
-    @include flex($dir:column, $jc: center, $ai: center, $gap:50px);
+.faq {
+  @include flex($dir: column, $jc: center, $ai: center, $gap: 50px);
 
-    &__title{
-        @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
+  &--title {
+    @include flex($dir: column, $jc: center, $ai: center, $gap: 30px);
 
-        @include tablet{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            h4{
-                grid-column: 1;
-                justify-self: center;
-                align-self: flex-start;
-                font-size: 32px;;
-            }
-        }
-
-        article{
-            width: 90%;
-            background-color: $light-grey;
-            padding: 4%;
-            
-            &:hover{
-                .article--help{
-                    display: none;
-                }
-            }
-
-            @include tablet{
-                grid-column: 2;
-            }
-            
-            .article--question{
-                display: grid;
-                grid-template-columns: auto 1fr;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 2%;
-    
-                h4{
-                    align-self: center;
-                    justify-self: flex-start;
-                    font-size: 16px;
-                    @include tablet{
-                        font-size: 24px;
-                    }
-                }
-    
-                img{
-                    align-self: center;
-                    justify-self: flex-end;
-                    transition: 0.4s;   
-                }
-                img:hover{
-                    transform: rotate(180deg) ;
-                }
-            }
-    
-            .article--help{
-                color: #939caa;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-        }
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      h4 {
+        grid-column: 1;
+        justify-self: center;
+        align-self: flex-start;
+        font-size: 32px;
+      }
     }
 
-    
+    article {
+      width: 90%;
+      background-color: $light-grey;
+      padding: 4%;
+      
+      &:hover{
+        .article--help{
+            display: none;
+        }
+    }
+      @include tablet {
+        grid-column: 2;
+      }
+
+      .article--question {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+
+        h4 {
+          align-self: center;
+          justify-self: flex-start;
+          font-size: 16px;
+          @include tablet {
+            font-size: 24px;
+          }
+        }
+
+        img {
+          align-self: center;
+          justify-self: flex-end;
+          transition: 0.4s;
+        }
+        img:hover {
+          transform: rotate(180deg);
+        }
+      }
+
+      .article--help {
+        color: #939caa;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 }
