@@ -1,0 +1,45 @@
+.banner {
+  height: 160px;
+  width: 100%;
+  padding: 0 var(--main-margin);
+  @include flex($ai: center, $jc: center);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    color: $white;
+  }
+
+  .triple-circles {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -$circle-size / 2;
+    transform: translateY(-50%);
+
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+.careers-location-background {
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 59, 89, 0.7) 0%,
+      rgba(47, 59, 89, 0.7) 100%
+    ),
+    url("../../assets/image/career_bg.jpg");
+}
+.about-background {
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 59, 89, 0.7) 0%,
+      rgba(47, 59, 89, 0.7) 100%
+    ),
+    url("../../assets/image/about_bg.jpg");
+}

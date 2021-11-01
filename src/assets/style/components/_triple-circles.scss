@@ -1,0 +1,13 @@
+.triple-circles {
+  @include flex($gap: 24px);
+  &__circle {
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    border: 3px solid $white;
+
+    &:last-child {
+      background-color: $white;
+    }
+  }
+}
