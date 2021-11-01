@@ -13,7 +13,6 @@ $top: 6px;
   z-index: 1000;
 
   @include tablet {
-    height: unset;
     justify-content: flex-start;
     gap: 60px;
   }
