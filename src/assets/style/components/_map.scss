@@ -21,8 +21,6 @@
       display: none;
       @include tablet{
         display: block;
-        background-image: url("../../image/dialog.svg");
-        background-size: cover;
       }
     }
     img{
