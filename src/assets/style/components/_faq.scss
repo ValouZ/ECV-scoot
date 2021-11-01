@@ -7,23 +7,18 @@
     width: inherit;
 
     @include tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      @include flex($jc: center, $ai: center, $gap: 30px);
+
       h4 {
-        grid-column: 1;
         justify-self: center;
         align-self: flex-start;
         font-size: 32px;
+        width: 100%;
       }
     }
     .faq__container{
       width: 100%;
-      @include tablet {
-        grid-column: 2;
-      }
-      @include desktop{
-        grid-column: 2;
-      }
+
       article {
         background-color: $light-grey;
         padding: 4%;
