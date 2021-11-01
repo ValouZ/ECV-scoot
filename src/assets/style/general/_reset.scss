@@ -8,6 +8,7 @@ body {
   font-family: "Lexend Deca";
   font-weight: normal;
   @extend %normal-font;
+  position: relative;
 }
 
 a {
@@ -74,4 +75,5 @@ h4 {
 main {
   overflow: hidden;
   @include flex(column, center, center, 120px);
+  margin-top: $header-height;
 }

@@ -2,11 +2,13 @@ $white: #fff;
 $yellow: #fcb72b;
 $light-yellow: #fff4df;
 $dark-navy: #495567;
+$dark-blue: #333a44;
 $grey: #939caa;
 $light-grey: #e5ecf4;
 $snow: #f2f5f9;
 
-$btn-w:183px;
+$btn-w: 183px;
+$header-height: 64px;
 
 :root {
   --figure-icone-size: 56px;
@@ -16,13 +18,13 @@ $btn-w:183px;
     --figure-icone-size: 96px;
     --main-margin: 12.5%;
   }
-  @include desktop{
+  @include desktop {
     --main-gap: 200px;
     --main-margin: 11.5%;
   }
 }
 
-%normal-font{
+%normal-font {
   font-size: 15px;
   line-height: 25px;
 }
