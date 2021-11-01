@@ -6,6 +6,8 @@ $grey: #939caa;
 $light-grey: #e5ecf4;
 $snow: #f2f5f9;
 
+$btn-w:183px;
+
 :root {
   --figure-icone-size: 56px;
   --main-margin: 8.5%;
@@ -18,4 +20,9 @@ $snow: #f2f5f9;
     --main-gap: 200px;
     --main-margin: 11.5%;
   }
+}
+
+%normal-font{
+  font-size: 15px;
+  line-height: 25px;
 }

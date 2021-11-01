@@ -1,0 +1,35 @@
+.jobs {
+  @include flex(column, center, center, 16px);
+  width: calc(100% - calc(2 * var(--main-margin)));
+  margin: 0 var(--main-margin);
+  max-width: 1110px;
+
+  &__job {
+    @include flex(column, center, center, 16px);
+    background: $snow;
+    width: 100%;
+    padding: 32px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @include flex(column, center, center, 4px);
+    color: $dark-navy;
+
+    @include tablet {
+      align-items: flex-start;
+    }
+  }
+
+  &__apply {
+    width: 100%;
+
+    @include tablet {
+      width: $btn-w;
+    }
+  }
+}

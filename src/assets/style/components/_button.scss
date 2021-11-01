@@ -3,25 +3,13 @@
   border: 3px solid $yellow;
   background-color: $yellow;
   color: $white;
-  width: 88px;
-  height: 40px;
-  font-family: Space Mono;
+  width: $btn-w;
+  height: 50px;
+  font-family: "Space Mono";
   font-weight: bold;
-  font-size: 10px;
+  @extend %normal-font;
   cursor: pointer;
-  transition: 0.4s;
-
-  @include tablet{
-    @include font($ff: "Space Mono", $fw: bold, $fs: 14px, $co: $white,);
-    width: 144px;
-    height: 45px;
-  }
-
-  @include desktop{
-    @include font($ff: "Space Mono", $fw: bold, $fs: 16px, $co: $white,);
-    width: 200px;
-    height: 60px;
-  }
+  transition: 0.3s;
 
   &:hover {
     border-color: $yellow;
