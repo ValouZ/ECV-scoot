@@ -8,19 +8,22 @@ $light-grey: #e5ecf4;
 $snow: #f2f5f9;
 
 $btn-w: 183px;
-$header-height: 64px;
-
 :root {
   --figure-icone-size: 56px;
   --main-margin: 8.5%;
   --main-gap: 120px;
+  --header-side-space: 32px;
+  --header-height: 64px;
   @include tablet {
     --figure-icone-size: 96px;
     --main-margin: 12.5%;
+    --header-side-space: 40px;
+    --header-height: 96px;
   }
   @include desktop {
     --main-gap: 200px;
     --main-margin: 11.5%;
+    --header-side-space: 170px;
   }
 }
 

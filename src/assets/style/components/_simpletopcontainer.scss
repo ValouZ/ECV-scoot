@@ -1,7 +1,7 @@
 .section-simpletopcontainer{
   height: 160px;
   width: 100%;
-  padding: 0 6vw;
+  padding: 0 var(--main-margin);
   @include flex($ai:center, $jc:center);
   background-repeat: no-repeat;
   background-size: cover;

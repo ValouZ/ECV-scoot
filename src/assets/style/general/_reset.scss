@@ -75,5 +75,5 @@ h4 {
 main {
   overflow: hidden;
   @include flex(column, center, center, 120px);
-  margin-top: $header-height;
+  margin-top: var(--header-height);
 }
