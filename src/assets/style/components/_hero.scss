@@ -1,110 +1,123 @@
-.hero{
+.hero {
   width: 100%;
   min-height: 500px;
   padding: 5vh 0;
-  background-image: linear-gradient(0deg, rgba(47,59,89,0.7) 0%, rgba(47,59,89,0.7) 100%), url('../../assets/image/home_bg.jpg');
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 59, 89, 0.7) 0%,
+      rgba(47, 59, 89, 0.7) 100%
+    ),
+    url("../../assets/image/home_bg.jpg");
   background-size: cover;
   background-position: right bottom;
   color: $white;
   text-align: center;
   position: relative;
   overflow: hidden;
-  display: grid; 
-  grid-template: auto auto auto auto / 100%; 
-  @include tablet{
-    grid-template-columns: 1fr 1fr; 
+  display: grid;
+  grid-template: auto auto auto auto / 100%;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
   }
-  @include desktop{
-    grid-template-columns: 0.7fr 0.2fr 1.5fr 1.6fr 1fr; 
-    grid-template-rows: 1fr 1fr 0.5fr; 
-    gap: 20px 20px;  
+  @include desktop {
+    // calc(var(--main-margin) - 20px) pour correspondre au margin de toute la page
+    grid-template-columns: calc(var(--main-margin) - 20px) 0.2fr 1.5fr 1.6fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    gap: 20px 20px;
   }
-  h1, p, button{
+  h1,
+  p,
+  button {
     margin: 0 10vw;
     align-self: center;
     justify-self: center;
-    @include tablet{
-      grid-column-start:1;
-      grid-column-end:span 2;
+    @include tablet {
+      grid-column-start: 1;
+      grid-column-end: span 2;
     }
   }
-  .hero__title{
+
+  & &__text {
+    @include desktop {
+      align-self: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  & &__title {
     color: $white;
     margin-top: 50px;
     margin-bottom: 24px;
-    @include desktop{
-      grid-column-start:2;
-      grid-column-end:span 2;
-      margin: 0;
-      text-align: left;
-    }
-  }
-  .hero__text{
-    margin-bottom: 34px;
-    @include desktop{
-      grid-column-start:3;
-      grid-column-end:span 1;
-      margin: 0;
-      text-align: left;
-    }
-  }
-  @include desktop{
-    .hero__lign{
-      content:"";
-      width: 100%;
-      border: 9px solid $yellow;
-      grid-column-start:1;
+    @include desktop {
+      grid-column-start: 2;
       grid-column-end: span 2;
-      grid-row-start:2;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  & &__text {
+    margin-bottom: 34px;
+    @include desktop {
+      grid-column-start: 3;
+      grid-column-end: span 1;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  @include desktop {
+    .hero__lign {
+      content: "";
+      width: 100%;
+      height: 16px;
+      background: $yellow;
+      // border: 9px solid $yellow;
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 2;
       grid-row-end: span 2;
       margin: 0;
       align-self: flex-start;
       margin-top: 50px;
     }
-    button{
-      grid-column-start:3;
-      grid-column-end:span 1;
+    button {
+      grid-column-start: 3;
+      grid-column-end: span 1;
       margin: 0;
       justify-self: flex-start;
       align-self: flex-start;
     }
   }
 
-  img{
+  img {
     justify-content: flex-start;
     margin-left: -300px;
-    @include tablet{
+    @include tablet {
       margin-left: -100px;
     }
-    @include desktop{
-      grid-column-start:4;
-      grid-column-end:span 1;
-      grid-row-start:2;
-      grid-row-end:span 2;
+    @include desktop {
+      grid-column-start: 4;
+      grid-column-end: span 1;
+      grid-row-start: 2;
+      grid-row-end: span 2;
       margin: 0;
       margin-top: 50px;
     }
   }
-  @include tablet{
-    div{
-      display: grid;
-      grid-template: 100% / 62px 62px 62px;
-      gap:20px;
+
+  .triple-circles {
+    grid-column-start: 2;
+    grid-row: -1 / span 1;
+    @include tablet {
       align-self: flex-end;
       justify-self: flex-end;
-      margin-right: -15px;
-      .hero__circle{
-        content:"";
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        border: 3px solid $white;
-        z-index: 1;
-        bottom: 3vh;
-      }
-      .hero-circle-three{
-        background-color: $white;
-      }
-    }  
+      transform: translateX($circle-size / 2);
+    }
+
+    @include desktop {
+      grid-column: 5 / span 1;
+      grid-row: 2 / span 1;
+      transform: translate($circle-size / 2, 30%);
+    }
   }
 }

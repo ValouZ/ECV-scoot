@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/main.scss" />
-    <link rel="icon" type="image/png" href="./assets/image/dark-logo.svg">
-    <title>Location - Scoot</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__brand">
-        <a href="./index.html">
-          <img
-            class="header__brand--label"
-            src="./assets/image/dark-logo.svg"
-          />
-        </a>
-      </div>
-      <div class="header__nav">
-        <nav class="header__nav">
-          <ul>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./location.html">Locations</a></li>
-            <li><a href="./careers.html">Carrers</a></li>
-          </ul>
-        </nav>
-      </div>
-      <button class="button header__btn" type="button">Get Scootin</button>
-    </header>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style/main.scss" />
+  <link rel="icon" type="image/png" href="./assets/image/dark-logo.svg">
+  <title>Location - Scoot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__title">
+      <a href="./index.html"><img src="./assets/image/dark-logo.svg"></a>
+    </div>
+
+    <input type="checkbox" class="header__check" id="burger-menu">
+    <label class="header__menu" for="burger-menu">
+      <div class="header__burger"></div>
+    </label>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./careers.html">Carrers</a></li>
+      </ul>
+      <button class="button header__btn" type="button"> Get Scootin</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner careers-location-background">
+      <h1>Location</h1>
+
+      <div class="triple-circles">
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+      </div>
+    </section>
+  </main>
+
+<<<<<<< HEAD
     <main>
       <section class="section-simpletopcontainer careers-location-background">
         <h1>Location</h1>
@@ -107,26 +114,57 @@
             width="110px"
             height="auto"
           />
+=======
+  <footer>
+    <section class="footer-download-app">
+      <div>
+        <div class="footer-download-app__circle circle-one"></div>
+        <div class="footer-download-app__circle circle-two"></div>
+        <div class="footer-download-app__circle circle-three"></div>
+      </div>
+      <h3>Sign up and Scoot off today</h3>
+      <div class="footer-download-app__links">
+        <a href="">
+          <img src="./assets/image/apple.svg" />
+          <div>
+            <p>Available on the</p>
+            <p>AppleStore</p>
+          </div>
         </a>
-        <nav>
-          <ul>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./location.html">Location</a></li>
-            <li><a href="./careers.html">Careers</a></li>
-          </ul>
-        </nav>
+        <a href="">
+          <img src="./assets/image/googlestore.svg" />
+          <div>
+            <p>Get it on</p>
+            <p>GooglePlay</p>
+          </div>
+>>>>>>> abb11951f291cfbbd97a7b50010059e515c0b97f
+        </a>
+      </div>
+    </section>
+    <section class="footer-links">
+      <a href="index.html" class="logo">
+        <img src="./assets/image/white-logo.svg" width="110px" height="auto" />
+      </a>
+      <nav>
         <ul>
-          <li>
-            <a href=""><img src="./assets/image/facebook.svg" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./assets/image/twitter.svg" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./assets/image/insta.svg" /></a>
-          </li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./location.html">Location</a></li>
+          <li><a href="./careers.html">Careers</a></li>
         </ul>
-      </section>
-    </footer>
-  </body>
+      </nav>
+      <ul>
+        <li>
+          <a href=""><img src="./assets/image/facebook.svg" /></a>
+        </li>
+        <li>
+          <a href=""><img src="./assets/image/twitter.svg" /></a>
+        </li>
+        <li>
+          <a href=""><img src="./assets/image/insta.svg" /></a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+</body>
+
 </html>

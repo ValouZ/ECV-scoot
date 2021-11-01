@@ -19,7 +19,6 @@
 
   &__value {
     position: relative;
-    // padding: 5vh 6vw;
     @include flex($dir: column, $jc: center, $ai: center);
     text-align: center;
   }
