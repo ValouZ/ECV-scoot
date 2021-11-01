@@ -17,62 +17,65 @@
         font-size: 32px;
       }
     }
-
-    article {
-      width: 90%;
-      background-color: $light-grey;
-      padding: 4%;
-            &:hover{
-                .faq__question{
-                    img {
-                        align-self: center;
-                        justify-self: flex-end;
-                        transition: 0.4s;
-                        transform: rotate(180deg);
-                    }
-                }
-                .faq__help{
-                  display: contents;
-                  color: #939caa;
-                  margin-left: auto;
-                  margin-right: auto;
-                }
-
-            }
+    .faq__container{
+      @include flex($dir: column, $jc: center, $ai: center, $gap: 50px);
       @include tablet {
         grid-column: 2;
       }
-
-      .faq__question {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2%;
-
-            h4 {
+      @include desktop{
+        grid-column: 2;
+      }
+      article {
+        width: 90%;
+        background-color: $light-grey;
+        padding: 4%;
+        &:hover {
+          .faq__question {
+            img {
+              align-self: center;
+              justify-self: flex-end;
+              transition: 0.4s;
+              transform: rotate(180deg);
+            }
+          }
+          .faq__help {
+            display: contents;
+            color: #939caa;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        .faq__question {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 2%;
+  
+          h4 {
             align-self: center;
             justify-self: flex-start;
             font-size: 16px;
             @include tablet {
-                font-size: 24px;
+              font-size: 24px;
             }
-            }
-
-            img {
+          }
+  
+          img {
             align-self: center;
             justify-self: flex-end;
             transition: 0.4s;
-                &:hover{
-                    transform: rotate(180deg);
-
-                }
+            &:hover {
+              transform: rotate(180deg);
             }
-      }
-
+          }
+        }
+  
         .faq__help {
           display: none;
         }
+      }
     }
+
   }
 }
