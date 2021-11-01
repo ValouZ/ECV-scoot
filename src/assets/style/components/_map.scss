@@ -1,0 +1,97 @@
+.map{
+  padding: 0 6vw;
+  width: 100%;
+  position: relative;
+  .map__point{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .map__point__circle{
+      content:"";
+        width: 16px;
+        height: 16px;
+        background-color: $yellow;
+        border-radius: 50%;
+        border: 3px solid $yellow;
+        z-index: 1;
+        @include tablet{
+          display: none;
+        }
+    }
+    .map__point__dialog {
+      display: none;
+      @include tablet{
+        display: block;
+        background-image: url("../../image/dialog.svg");
+        background-size: cover;
+      }
+    }
+    img{
+      grid-column-start:1;
+      grid-column-end:-1;
+      grid-row-start:1;
+      grid-row-end:-1;
+      width: 100%;
+    }
+    .map-circle-one{
+      grid-column-start:4;
+      grid-column-end:span 1;
+      grid-row-start:4;
+      grid-row-end:span 1;
+      align-self: flex-end;
+      justify-self: flex-start;
+    }
+    .map-circle-two{
+      grid-column-start:7;
+      grid-column-end:span 1;
+      grid-row-start:3;
+      grid-row-end:span 1;
+      align-self: center;
+      justify-self: center;
+    }
+    .map-circle-three{
+      grid-column-start:12;
+      grid-column-end:span 1;
+      grid-row-start:7;
+      grid-row-end:span 1;
+      align-self: flex-start;
+      justify-self: center;
+    }
+    .map-circle-four{
+      grid-column-start:13;
+      grid-column-end:span 1;
+      grid-row-start:4;
+      grid-row-end:span 1;
+      align-self: flex-end;
+      justify-self: center;
+    }
+  }
+  .map__list {
+    @include flex($dir: column, $jc: center, $ai: center,$gap:16px);
+    margin-top: 40px;
+    @include tablet{
+      display: none;
+    }
+    li{
+      background: rgba(252, 183, 43, 0.15);
+      color: $dark-navy;
+      width: 100%;
+      @include flex($dir: column, $jc: center, $ai: center);
+      padding: 20px 0;
+      font-size: 24px;
+    }
+  }
+}
+
+.not-listed{
+  padding: 0 6vw;
+  text-align: center;
+  @include flex($dir: column, $jc: center, $ai: center, $gap:32px);
+  p{
+    color: $grey;
+  }
+  @include desktop{
+    flex-direction:row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
