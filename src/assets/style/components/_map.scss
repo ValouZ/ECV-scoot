@@ -1,0 +1,200 @@
+.map{
+  padding: 0 6vw;
+  width: 100%;
+  position: relative;
+  .map__point{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .map__point__circle{
+        width: 16px;
+        height: 16px;
+        background-color: $yellow;
+        border-radius: 50%;
+        border: 3px solid $yellow;
+        z-index: 1;
+        @include tablet{
+          border-radius: initial;
+          background-color:initial;
+          width: 0;
+          height: 0;
+          border-top: initial;
+          border-left: 16px solid transparent;
+          border-right: 16px solid transparent;
+          border-bottom: 16px solid $yellow;
+          transform: rotate(180deg);
+        }
+    }
+    .map__point__dialog {
+      display: none;
+      @include tablet{
+        display: block;
+        background-color: $yellow;
+        width: 120px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      @include desktop{
+        width: 189px;
+        height: 60px;
+      }
+    }
+    img{
+      grid-column-start:1;
+      grid-column-end:-1;
+      grid-row-start:1;
+      grid-row-end:-1;
+      width: 100%;
+    }
+    .map-circle-one{
+      grid-column-start:4;
+      grid-column-end:span 1;
+      grid-row-start:4;
+      grid-row-end:span 1;
+      align-self: flex-end;
+      justify-self: flex-start;
+      @include tablet{
+        grid-column-start:3;
+        align-self: center;
+      }
+      @include desktop{
+        grid-column-start:4;
+      }
+    }
+    
+      .map-dialog-one{
+        @include tablet{
+        grid-column-start:2;
+        grid-column-end:span 3;
+        grid-row-start:3;
+        grid-row-end:span 2;
+        align-self: center;
+        justify-self: center;
+        }
+        @include desktop{
+          grid-column-start:3;
+        }
+      }
+    .map-circle-two{
+      grid-column-start:7;
+      grid-column-end:span 1;
+      grid-row-start:3;
+      grid-row-end:span 1;
+      align-self: center;
+      justify-self: center;
+      @include tablet{
+        align-self: flex-start;
+        justify-self: flex-start;
+      }
+      @include desktop{
+        grid-column-start:8;
+      }
+    }
+    
+      .map-dialog-two{
+        @include tablet{
+        grid-column-start:6;
+        grid-column-end:span 2;
+        grid-row-start:2;
+        grid-row-end:span 1.5;
+        align-self: flex-end;
+        justify-self: center;
+        }
+        @include desktop{
+          grid-column-start:7;
+        }
+      }
+    .map-circle-three{
+      grid-column-start:12;
+      grid-column-end:span 1;
+      grid-row-start:7;
+      grid-row-end:span 1;
+      align-self: flex-start;
+      justify-self: center;
+      @include tablet{
+        justify-self: center;
+        align-self: flex-start;
+        grid-row-start:8;
+      }
+      @include desktop{
+        grid-column-start:13;
+      }
+    }
+    
+      .map-dialog-three{
+        @include tablet{
+        grid-column-start:12;
+        grid-column-end:span 1;
+        grid-row-start:7;
+        grid-row-end:span 1;
+        align-self: flex-end;
+        justify-self: center;
+        }
+        @include desktop{
+          grid-column-start:13;
+        }
+      }
+
+    .map-circle-four{
+      grid-column-start:13;
+      grid-column-end:span 1;
+      grid-row-start:4;
+      grid-row-end:span 1;
+      align-self: flex-end;
+      justify-self: center;
+      @include tablet{
+        align-self: flex-start; 
+      }
+      @include desktop{
+      }
+    }
+    @include tablet{
+      .map-dialog-four{
+        grid-column-start:13;
+        grid-column-end:span 1;
+        grid-row-start:3;
+        grid-row-end:span 1;
+        align-self: flex-end;
+        justify-self: center;
+      }
+    }
+  }
+  .map__list {
+    @include flex($dir: column, $jc: center, $ai: center,$gap:16px);
+    margin-top: 40px;
+    @include tablet{
+      display: none;
+    }
+    li{
+      background: rgba(252, 183, 43, 0.15);
+      color: $dark-navy;
+      width: 100%;
+      @include flex($dir: column, $jc: center, $ai: center);
+      padding: 20px 0;
+      font-size: 24px;
+    }
+  }
+}
+
+.not-listed{
+  padding: 0 6vw;
+  text-align: center;
+  @include flex($dir: column, $jc: center, $ai: center, $gap:32px);
+  p{
+    color: $grey;
+    @include desktop{
+      width: 70%;
+    }
+  }
+  h2{
+    @include desktop{
+      width: 40%;
+    }
+  }
+  @include desktop{
+    flex-direction:row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

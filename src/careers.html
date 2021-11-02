@@ -16,27 +16,32 @@
 
 <body>
   <header class="header">
-    <div class="header__brand">
-      <a href="./index.html"><img class="header__brand--label" src="./assets/image/dark-logo.svg"></a>
+    <div class="header__title">
+      <a href="./index.html"><img src="./assets/image/dark-logo.svg"></a>
     </div>
-    <div class="header__nav">
-      <nav class="header__nav">
-        <ul>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./location.html">Locations</a></li>
-          <li><a href="./careers.html">Carrers</a></li>
-        </ul>
-      </nav>
-    </div>
-    <button class="button header__btn" type="button"> Get Scootin</button>
+
+    <input type="checkbox" class="header__check" id="burger-menu">
+    <label class="header__menu" for="burger-menu">
+      <div class="header__burger"></div>
+    </label>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./careers.html">Carrers</a></li>
+      </ul>
+      <button class="button header__btn" type="button"> Get Scootin</button>
+    </nav>
   </header>
 
   <main>
-    <section class="section-simpletopcontainer careers-location-background">
+    <section class="banner careers-location-background">
       <h1>Careers</h1>
-      <div class="section-simpletopcontainer__circle topcontainer-circle-one"></div>
-      <div class="section-simpletopcontainer__circle topcontainer-circle-two"></div>
-      <div class="section-simpletopcontainer__circle topcontainer-circle-three"></div>
+      <div class="triple-circles">
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+      </div>
     </section>
 
     <section class="bubbles">

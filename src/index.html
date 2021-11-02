@@ -16,21 +16,22 @@
 
 <body>
   <header class="header">
-    <div class="header__brand">
-      <a href="./index.html">
-        <img class="header__brand--label" src="./assets/image/dark-logo.svg" />
-      </a>
+    <div class="header__title">
+      <a href="./index.html"><img src="./assets/image/dark-logo.svg"></a>
     </div>
-    <div class="header__nav">
-      <nav class="header__nav">
-        <ul>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./location.html">Locations</a></li>
-          <li><a href="./careers.html">Carrers</a></li>
-        </ul>
-      </nav>
-    </div>
-    <button class="button header__btn" type="button">Get Scootin</button>
+
+    <input type="checkbox" class="header__check" id="burger-menu">
+    <label class="header__menu" for="burger-menu">
+      <div class="header__burger"></div>
+    </label>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./careers.html">Carrers</a></li>
+      </ul>
+      <button class="button header__btn" type="button"> Get Scootin</button>
+    </nav>
   </header>
 
   <main>
@@ -41,10 +42,10 @@
         in each of our cities. Use our app to locate the nearest bike, unlock it with a tap, and you’re away!</p>
       <button class="hero__button button" type="button"> Get Scootin</button>
       <img src="./assets/image/arrow-header.svg" alt="Yellow arrow" width="447px" height="auto">
-      <div class="hero__circles">
-        <div class="hero__circle hero-circle-one"></div>
-        <div class="hero__circle hero-circle-two"></div>
-        <div class="hero__circle hero-circle-three"></div>
+      <div class="triple-circles">
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
       </div>
     </section>
 
@@ -128,7 +129,7 @@
           <img src="./assets/image/home_bubble3.jpg" alt="Someaone holding a wallet" class="bubbles__img" />
           <img src="./assets/image/arrow.svg" alt="Yellow arrow" class="bubbles__arrow" />
         </div>
-        
+
         <div class="bubbles__content">
           <h2>Zero hassle payments</h2>
           <p>
