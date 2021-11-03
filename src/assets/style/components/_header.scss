@@ -204,5 +204,9 @@ $top: 6px;
   & &__btn {
     width: 100%;
     max-width: $btn-w;
+
+    @include tablet {
+      width: $btn-w;
+    }
   }
 }

@@ -2,6 +2,7 @@
   position: relative;
   @include flex($dir: column, $jc: center, $ai: center, $gap: 64px);
   margin: 0 var(--main-margin);
+  width: calc(100% - var(--main-margin) * 2);
 
   @include tablet {
     gap: 100px;
@@ -9,11 +10,13 @@
 
   &__items {
     @include flex($dir: column, $jc: center, $ai: center, $gap: 56px);
+    width: 100%;
 
     @include desktop {
       flex-direction: row;
       gap: 30px;
       align-items: flex-start;
+      justify-content: space-between;
     }
   }
 
