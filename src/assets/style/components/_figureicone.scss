@@ -18,6 +18,7 @@
         var(--main-gap) + calc(100% - calc(var(--figure-icone-size) / 2))
       );
       background: $light-grey;
+      z-index: -1;
     }
   }
 
@@ -35,23 +36,28 @@
 
   &__article {
     @include flex($dir: column, $jc: center, $ai: center);
-    @include between-desktop-tablet {
-      z-index: 3;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 100px 1fr;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
       gap: 48px;
+      width: 100%;
     }
+
     @include desktop {
-      z-index: 3;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
     }
     h4 {
       font-weight: bold;
       color: $dark-navy;
       margin: 24px 0;
       font-size: 20px;
-      @include between-desktop-tablet {
+      @include tablet {
         margin-top: 0;
+      }
+      @include desktop {
+        margin: 24px 0;
       }
     }
     p {
