@@ -1,7 +1,7 @@
 .figure-icones {
   margin: 0 var(--main-margin);
   text-align: center;
-  @include flex($dir: column, $jc: center, $ai: center, $gap: 48px);
+  @include flex(column, center, center, 48px);
 
   @include tablet {
     position: relative;
