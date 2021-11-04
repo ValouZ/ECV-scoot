@@ -6,13 +6,11 @@ $bubble-size: 445px;
 
   &__bubble {
     position: relative;
-    // margin: 5vh 8vw;
     @include flex($dir: column, $jc: center, $ai: center, $gap: 40px);
     text-align: center;
 
     @include desktop {
       @include flex($dir: row, $jc: space-between, $gap: 50px, $ai: center);
-      // margin: 10vh 11.5vw;
       text-align: left;
     }
 
