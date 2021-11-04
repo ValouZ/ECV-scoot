@@ -67,11 +67,9 @@
   }
   @include desktop {
     .hero__lign {
-      content: "";
       width: 100%;
       height: 16px;
       background: $yellow;
-      // border: 9px solid $yellow;
       grid-column-start: 1;
       grid-column-end: span 2;
       grid-row-start: 2;
