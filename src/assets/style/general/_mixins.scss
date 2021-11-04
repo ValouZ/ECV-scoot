@@ -10,12 +10,6 @@
   }
 }
 
-@mixin between-desktop-tablet {
-  @media screen and (min-width: 768px) and (max-width : 1199px) {
-    @content;
-  }
-}
-
 @mixin flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 0px) {
   display: flex;
   flex-direction: $dir;
