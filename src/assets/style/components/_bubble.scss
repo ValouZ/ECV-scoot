@@ -1,21 +1,23 @@
 $bubble-size: 445px;
 
 .bubbles {
+  @include flex($dir: column, $jc: center, $ai: center, $gap: 120px);
+  margin: 0 var(--main-margin);
 
   &__bubble {
     position: relative;
-    margin: 5vh 8vw;
+    // margin: 5vh 8vw;
     @include flex($dir: column, $jc: center, $ai: center, $gap: 40px);
     text-align: center;
 
     @include desktop {
-      margin: 10vh 11.5vw;
-      text-align: left;
       @include flex($dir: row, $jc: space-between, $gap: 50px, $ai: center);
+      // margin: 10vh 11.5vw;
+      text-align: left;
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
 
       @include tablet {
@@ -31,6 +33,10 @@ $bubble-size: 445px;
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+
+    .bubbles__images {
+      position: relative;
     }
 
     .bubbles__img {
@@ -87,7 +93,7 @@ $bubble-size: 445px;
       }
     }
 
-    &--right {
+    &:nth-child(odd) {
       &:before {
         @include tablet {
           right: -410px;
@@ -102,12 +108,12 @@ $bubble-size: 445px;
       }
 
       .bubbles__arrow {
-        left: 10%;
+        left: -10px;
         top: 160px;
 
         @include tablet {
-          left: initial;
-          right: -8vw;
+          left: unset;
+          right: -80%;
           top: 300px;
         }
 
@@ -118,8 +124,11 @@ $bubble-size: 445px;
 
       &:not(:first-child) {
         .bubbles__arrow {
+          left: 30%;
+
           @include tablet {
-            right: -350px;
+            left: unset;
+            right: -550px;
           }
           @include desktop {
             right: -550px;
@@ -128,7 +137,7 @@ $bubble-size: 445px;
       }
     }
 
-    &--left {
+    &:nth-child(even) {
       &:before {
         @include tablet {
           left: -410px;
@@ -138,11 +147,10 @@ $bubble-size: 445px;
         }
       }
       .bubbles__arrow {
-        right: 10%;
         top: 160px;
 
         @include tablet {
-          right: initial;
+          right: unset;
           left: -8vw;
           top: 250px;
         }
@@ -154,8 +162,10 @@ $bubble-size: 445px;
       }
       &:not(:first-child) {
         .bubbles__arrow {
+          right: 30%;
           @include tablet {
-            left: -350px;
+            right: unset;
+            left: -550px;
           }
           @include desktop {
             left: -550px;

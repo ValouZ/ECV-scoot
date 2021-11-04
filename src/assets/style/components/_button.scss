@@ -3,14 +3,13 @@
   border: 3px solid $yellow;
   background-color: $yellow;
   color: $white;
-  width: 180px;
-  height: 53px;
-  font-family: Space Mono;
+  width: $btn-w;
+  height: 50px;
+  font-family: "Space Mono";
   font-weight: bold;
-  font-size: 15px;
-  line-height: 25px;
+  @extend %normal-font;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 
   &:hover {
     border-color: $yellow;

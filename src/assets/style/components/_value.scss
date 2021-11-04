@@ -1,67 +1,71 @@
-.section-value{
-    position: relative;
-    padding: 5vh 6vw;
-    @include flex($dir: column, $jc:center, $ai:center, $gap: 40px);
-    text-align: center;
+.values {
+  position: relative;
+  @include flex($dir: column, $jc: center, $ai: center, $gap: 64px);
+  margin: 0 var(--main-margin);
+  width: calc(100% - var(--main-margin) * 2);
 
-    img:first-child{
+  @include tablet {
+    gap: 100px;
+  }
+
+  &__items {
+    @include flex($dir: column, $jc: center, $ai: center, $gap: 56px);
+    width: 100%;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__value {
+    position: relative;
+    @include flex($dir: column, $jc: center, $ai: center);
+    text-align: center;
+  }
+
+  &__bubble {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+
+    img:first-child {
+      position: relative;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    img:nth-child(2) {
+      position: absolute;
+      top: 75%;
+      z-index: 4;
+    }
+
+    @include desktop {
+      img:first-child {
+        position: relative;
         border-radius: 50%;
         z-index: 3;
-    }
-    img:nth-child(2){
+      }
+      img:nth-child(2) {
         position: absolute;
+        top: 75%;
         z-index: 4;
+      }
     }
+  }
 
-    div{
-        @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
-        h2{
-            font-size: 32px;
-            line-height: 32px;
-        }
-        p{
-            color:$grey;
-        }
+  &__content {
+    @include flex($dir: column, $jc: center, $ai: center, $gap: 24px);
+    max-width: 350px;
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
     }
-
-}
-
-.center{
-    @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
-}
-
-@media screen and (min-width: 768px) {
-    .section-value{
-        position: relative;
-        padding: 5vh 6vw;
-        @include flex($dir: column, $jc:center, $ai:center, $gap: 40px);
-        text-align: center;
-        overflow: hidden;
-    
-        img:first-child{
-            border-radius: 50%;
-            z-index: 3;
-        }
-        img:nth-child(2){
-            position: absolute;
-            z-index: 4;
-        }
-    
-        div{
-            @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
-            h2{
-                font-size: 32px;
-                line-height: 32px;
-            }
-            p{
-                color:$grey;
-            }
-        }
-    
+    p {
+      color: $grey;
     }
-    
-    .center{
-        @include flex($dir:column, $jc: center, $ai: center, $gap:30px);
-    }
-    
+  }
 }

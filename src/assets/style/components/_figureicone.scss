@@ -1,31 +1,33 @@
 .figure-icones {
-  margin: 120px 6vw;
+  margin: 0 var(--main-margin);
   text-align: center;
   @include flex(column, center, center, 48px);
 
   @include tablet {
     position: relative;
     text-align: left;
-    margin: 0 6vw;
-    padding: 10vh 0;
     gap: 40px;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
+      top: calc(-1 * var(--main-gap));
       left: 0;
       transform: translateX(calc(-50% + calc(var(--figure-icone-size) / 2)));
       width: 15px;
-      height: 75%;
+      height: calc(
+        var(--main-gap) + calc(100% - calc(var(--figure-icone-size) / 2))
+      );
       background: $light-grey;
+      z-index: -1;
     }
   }
 
   @include desktop {
     @include flex($dir: row, $jc: flex-start, $ai: flex-start, $gap: 48px);
-    padding: 0 6vw 160px;
-    margin: 120px 0;
+    margin: 0;
+    padding: 0 var(--main-margin);
     &::before {
+      top: 0;
       transform: translateY(calc(-50% + calc(var(--figure-icone-size) / 2)));
       width: 68%;
       height: 15px;
@@ -34,23 +36,28 @@
 
   &__article {
     @include flex($dir: column, $jc: center, $ai: center);
-    @include between-desktop-tablet {
-      z-index: 3;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 100px 1fr;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
       gap: 48px;
+      width: 100%;
     }
+
     @include desktop {
-      z-index: 3;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
     }
     h4 {
       font-weight: bold;
       color: $dark-navy;
       margin: 24px 0;
       font-size: 20px;
-      @include between-desktop-tablet {
+      @include tablet {
         margin-top: 0;
+      }
+      @include desktop {
+        margin: 24px 0;
       }
     }
     p {

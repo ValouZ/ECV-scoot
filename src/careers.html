@@ -1,141 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/main.scss" />
-    <link rel="icon" type="image/png" href="./assets/image/dark-logo.svg" />
-    <title>About - Scoot</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__brand">
-        <a href="./index.html">
-          <img
-            class="header__brand--label"
-            src="./assets/image/dark-logo.svg"
-            alt="logo scoot"
-          />
-        </a>
-      </div>
-      <div class="header__nav">
-        <nav class="header__nav">
-          <ul>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./location.html">Locations</a></li>
-            <li><a href="./careers.html">Carrers</a></li>
-          </ul>
-        </nav>
-      </div>
-      <button class="button header__btn" type="button">Get Scootin</button>
-    </header>
 
-    <main>
-      <section class="section-simpletopcontainer careers-location-background">
-        <h1>Careers</h1>
-        <div
-          class="section-simpletopcontainer__circle topcontainer-circle-one"
-        ></div>
-        <div
-          class="section-simpletopcontainer__circle topcontainer-circle-two"
-        ></div>
-        <div
-          class="section-simpletopcontainer__circle topcontainer-circle-three"
-        ></div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style/main.scss" />
+  <link rel="icon" type="image/png" href="./assets/image/dark-logo.svg" />
+  <title>Careers - Scoot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet" />
+</head>
 
-      <section>
-        <article class="section-bubble bubble-right">
-          <img
-            src="./assets/image/career_bubble.jpg"
-            alt="Someaone riding a text on her phone"
-            width="311px"
-            height="311px"
-          />
-          <img
-            src="./assets/image/arrow.svg"
-            alt="Yellow arrow"
-            width="735px"
-            height="auto"
-          />
-          <div>
-            <h2>Care to join our mission?</h2>
+<body>
+  <header class="header">
+    <div class="header__title">
+      <a href="./index.html"><img src="./assets/image/dark-logo.svg"></a>
+    </div>
+
+    <input type="checkbox" class="header__check" id="burger-menu">
+    <label class="header__menu" for="burger-menu">
+      <div class="header__burger"></div>
+    </label>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./location.html">Location</a></li>
+        <li><a href="./careers.html">Carrers</a></li>
+      </ul>
+      <button class="button header__btn" type="button"> Get Scootin</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner careers-location-background">
+      <h1>Careers</h1>
+      <div class="triple-circles">
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+        <div class="triple-circles__circle"></div>
+      </div>
+    </section>
+
+    <section class="bubbles">
+      <article class="bubbles__bubble">
+        <div class="bubbles__images">
+          <img class="bubbles__img" src="./assets/image/career_bubble.jpg" alt="Someaone riding a text on her phone">
+          <img class="bubbles__arrow arrow" src="./assets/image/arrow.svg" alt="Yellow arrow">
+        </div>
+        <div class="bubbles__content">
+          <h2>Care to join our mission?</h2>
+          <p>We’re always looking for ambitious individuals to help us on our journey. If you’re passionate about our
+            mission to provide clean, accessible transport to improve urban living we want to hear from you!</p>
+          <button class="button header__btn" type="button">Say hello</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="values">
+      <h2>Why join us ?</h2>
+      <div class="values__items">
+        <article class="values__value">
+          <div class="values__bubble">
+            <img src="./assets/image/value_bubble1.jpg" alt="Someone holding an iPhone">
+            <img src="./assets/image/value_svg1.svg" alt="bubble number 1">
+          </div>
+          <div class="values__content">
+            <h4>Our tech</h4>
             <p>
-              We’re always looking for ambitious individuals to help us on our
-              journey. If you’re passionate about our mission to provide clean,
-              accessible transport to improve urban living we want to hear from
-              you!
+              We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric
+              scooters are a joy to ride!
             </p>
-            <button class="button header__btn" type="button">Say hello</button>
           </div>
         </article>
-      </section>
-    </main>
 
-    <footer>
-      <section class="footer-section-download-app">
-        <div>
-          <div class="footer-section-download-app__circle circle-one"></div>
-          <div class="footer-section-download-app__circle circle-two"></div>
-          <div class="footer-section-download-app__circle circle-three"></div>
+        <article class="values__value">
+          <div class="values__bubble">
+            <img src="./assets/image/value_bubble2.jpg" alt="Someone holding an iPhone">
+            <img src="./assets/image/value_svg2.svg" alt="bubble number 2">
+          </div>
+          <div class="values__content">
+            <h4>Our integrity</h4>
+            <p>
+              We are fully committed to deliver a great yet safe, sustainable micro-mobility experience in every city we
+              serve. </p>
+            </p>
+          </div>
+        </article>
+
+        <article class="values__value">
+          <div class="values__bubble">
+            <img src="./assets/image/value_bubble3.jpg" alt="Someone holding an iPhone">
+            <img src="./assets/image/value_svg3.svg" alt="bubble number 3">
+          </div>
+          <div class="values__content">
+            <h4>Our community</h4>
+            <p>
+              We uses local workforce with neighborhood organizations to greatly improve the overall growth and improve
+              urban living. </p>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="jobs">
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>General Manager</h4>
+          <p>Jakarta, Indonesia</p>
         </div>
-        <h3>Sign up and Scoot off today</h3>
-        <div class="section-download-app__links">
-          <a href="">
-            <img src="./assets/image/apple.svg" alt="apple store" />
-            <div>
-              <p>Available on the</p>
-              <p>AppleStore</p>
-            </div>
-          </a>
-          <a href="">
-            <img src="./assets/image/googlestore.svg" alt="google store" />
-            <div>
-              <p>Get it on</p>
-              <p>GooglePlay</p>
-            </div>
-          </a>
+        <button class="button jobs__apply">Apply</button>
+      </article>
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>UI/UX Designer</h4>
+          <p>Yokohama, Japan</p>
         </div>
-      </section>
-      <section class="footer-section-links">
-        <a href="index.html" class="logo">
-          <img
-            src="./assets/image/white-logo.svg"
-            alt="logo scoot"
-            width="110px"
-            height="auto"
-          />
+        <button class="button jobs__apply">Apply</button>
+      </article>
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>Blog Content Copywriter</h4>
+          <p>New York, United States</p>
+        </div>
+        <button class="button jobs__apply">Apply</button>
+      </article>
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>Graphic Designer</h4>
+          <p>New York, United States</p>
+        </div>
+        <button class="button jobs__apply">Apply</button>
+      </article>
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>Fleet Supervisor</h4>
+          <p>Jakarta, Indonesia</p>
+        </div>
+        <button class="button jobs__apply">Apply</button>
+      </article>
+      <article class="jobs__job">
+        <div class="jobs__content">
+          <h4>UX Analyst
+          </h4>
+          <p>London, United Kingdom</p>
+        </div>
+        <button class="button jobs__apply">Apply</button>
+      </article>
+    </section>
+  </main>
+
+
+  <footer>
+    <section class="footer-download-app">
+      <div>
+        <div class="footer-download-app__circle circle-one"></div>
+        <div class="footer-download-app__circle circle-two"></div>
+        <div class="footer-download-app__circle circle-three"></div>
+      </div>
+      <h3>Sign up and Scoot off today</h3>
+      <div class="footer-download-app__links">
+        <a href="">
+          <img src="./assets/image/apple.svg" />
+          <div>
+            <p>Available on the</p>
+            <p>AppleStore</p>
+          </div>
         </a>
-        <nav>
-          <ul>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./location.html">Location</a></li>
-            <li><a href="./careers.html">Careers</a></li>
-          </ul>
-        </nav>
+        <a href="">
+          <img src="./assets/image/googlestore.svg" />
+          <div>
+            <p>Get it on</p>
+            <p>GooglePlay</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="footer-links">
+      <a href="index.html" class="logo">
+        <img src="./assets/image/white-logo.svg" width="110px" height="auto" />
+      </a>
+      <nav>
         <ul>
-          <li>
-            <a href=""><img src="./assets/image/facebook.svg" alt="facebook"/></a>
-          </li>
-          <li>
-            <a href=""><img src="./assets/image/twitter.svg" alt="twitter" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./assets/image/insta.svg" alt="instagram"/></a>
-          </li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./location.html">Location</a></li>
+          <li><a href="./careers.html">Careers</a></li>
         </ul>
-      </section>
-    </footer>
-  </body>
+      </nav>
+      <ul>
+        <li>
+          <a href="#"><img src="./assets/image/facebook.svg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/image/twitter.svg" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./assets/image/insta.svg" /></a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+</body>
+
 </html>

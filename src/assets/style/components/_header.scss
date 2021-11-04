@@ -1,70 +1,212 @@
+$padding-left: 32px;
+$top: 6px;
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 22px var(--main-margin);
+  height: var(--header-height);
+  width: 100%;
+  background: $white;
+  @include flex($jc: center, $ai: center);
+  z-index: 1000;
+
+  @include tablet {
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  &__title {
+    align-self: center;
+    justify-self: flex-start;
+
+    a {
+      // padding: 10px;
+      @include flex($jc: center, $ai: center);
+      img {
+        width: 75.5px;
+        // height: 20px;
+
+        @include tablet {
+          width: 108px;
+        }
+      }
+    }
+  }
+
+  &__check {
+    display: none;
+
+    &:checked {
+      + .header__menu {
+        &::after {
+          transform: translateX(0);
+        }
+
+        &:hover {
+          .header__burger {
+            &::after {
+              left: 0;
+            }
+          }
+        }
+
+        .header__burger {
+          transform: rotate(45deg);
+          &::before {
+            top: 0;
+            opacity: 0;
+          }
+
+          &::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      ~ .header__nav {
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    left: var(--main-margin);
+    top: 0;
+    @include flex(row, center, center);
+    height: 100%;
+    cursor: pointer;
+
+    @include tablet {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(-1 * var(--main-margin));
+      top: var(--header-height);
+      width: 100vw;
+      height: 100vh;
+      background: rgba($color: #000000, $alpha: 0.75);
+      z-index: 1;
+      transform: translateX(100%);
+      transition: 0.5s ease-in-out transform;
+    }
+
+    &:hover {
+      .header__burger {
+        &::before {
+          top: $top;
+        }
+
+        &::after {
+          top: -$top;
+        }
+      }
+    }
+  }
+
+  &__burger {
     position: relative;
-    padding: 2vh 6vw;
+    width: 20px;
+    height: 4px;
+    background: $yellow;
+    transition: 0.3s;
 
-    display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    column-gap: 4%;
-    background: $white;
+    &::after {
+      content: "";
+      position: absolute;
+      top: $top;
+      left: 0;
+      background: inherit;
+      width: inherit;
+      height: inherit;
+      transition: inherit;
+    }
 
-    &__brand{
-        align-self: center;
-        justify-self: flex-start;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -$top;
+      left: 0;
+      background: inherit;
+      width: inherit;
+      height: inherit;
+      transition: inherit;
     }
-    &__nav{
-        align-self: center;
-        li{
-            display: inline;
-            padding-right: 2%;
-            a{
-                @include font($ff: "Space Mono", $fw: bold, $fs:15px);
-                &:hover{
-                  color: $yellow;
-                }
-            }
-        }
+  }
+
+  &__nav {
+    @include flex(column, space-between, flex-start, 24px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%) translateX(-100%);
+    z-index: 100;
+    background: $dark-blue;
+    width: 70%;
+    min-width: 300px;
+    height: calc(100vh - var(--header-height));
+    padding: 64px 32px 24px;
+    transition: 0.5s ease-in-out transform;
+
+    @include tablet {
+      position: initial;
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+      height: unset;
+      transform: unset;
+      padding: unset;
+      width: 100%;
+      background: unset;
     }
-    &__btn{
-        align-self: center;
-        justify-self: flex-end;
+  }
+
+  &__list {
+    @include flex(column, center, flex-start, 0);
+    width: 100%;
+
+    @include tablet {
+      width: unset;
+      flex-direction: row;
+      gap: 32px;
     }
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      color: $light-grey;
+      font-family: "Space Mono";
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      padding: 12px 0;
+
+      &:hover {
+        color: $yellow;
+      }
+
+      @include tablet {
+        color: $grey;
+      }
+    }
+  }
+
+  & &__btn {
+    width: 100%;
+    max-width: $btn-w;
+
+    @include tablet {
+      width: $btn-w;
+    }
+  }
 }
-
-@media screen and (max-width: 600px) {
-    .header {
-        position: relative;
-        padding: 20px 10px;
-    
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 1%;
-        background: $white;
-    
-      
-        &__brand{
-            align-self: center;
-            justify-self: center;
-        }
-        &__nav{
-            align-self: center;
-            li{
-                display: inline;
-                a{
-                    @include font($ff: Space Mono, $fw: bold, $fs:9px);
-                }
-            }
-        }
-        &__btn{
-            align-self: center;
-        }
-    }
-}
-
-
-@media screen and (min-width:320px) and (max-width: 370px) {
-    a{
-        @include font($ff: Space Mono, $fw: bold, $fs:8px);
-    }
-}
-
-
